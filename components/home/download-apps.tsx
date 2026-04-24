@@ -23,7 +23,8 @@ export function DownloadApps() {
       </motion.div>
 
       <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-        {/* Appointik – Clinic App */}
+        
+        {/* Card 1 */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -31,8 +32,8 @@ export function DownloadApps() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="p-8 bg-gradient-to-br from-royal-50 to-blue-50 border-royal-100 rounded-3xl shadow-lg">
-            <div className="w-16 h-16 bg-royal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <Card className="p-8 bg-gray-50 border border-gray-200 rounded-3xl shadow-lg hover:shadow-xl transition-all">
+            <div className="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Smartphone className="w-8 h-8 text-white" />
             </div>
 
@@ -60,7 +61,7 @@ export function DownloadApps() {
           </Card>
         </motion.div>
 
-        {/* Appointik G – General Scheduling */}
+        {/* Card 2 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,13 +69,13 @@ export function DownloadApps() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="p-8 bg-gradient-to-br from-teal-50 to-cyan-50 border-teal-100 rounded-3xl shadow-lg">
-            <div className="w-16 h-16 bg-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <Card className="p-8 bg-gray-50 border border-gray-200 rounded-3xl shadow-lg hover:shadow-xl transition-all">
+            <div className="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Calendar className="w-8 h-8 text-white" />
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Appointik G – Appointment Scheduling App
+              AppointikG – Appointment Scheduling App
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
@@ -97,7 +98,7 @@ export function DownloadApps() {
           </Card>
         </motion.div>
 
-        {/* Appointik Patient App */}
+        {/* Card 3 */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -105,8 +106,8 @@ export function DownloadApps() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Card className="p-8 bg-gradient-to-br from-indigo-50 to-purple-50 border-indigo-100 rounded-3xl shadow-lg">
-            <div className="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <Card className="p-8 bg-gray-50 border border-gray-200 rounded-3xl shadow-lg hover:shadow-xl transition-all">
+            <div className="w-16 h-16 bg-gray-900 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <User className="w-8 h-8 text-white" />
             </div>
 
@@ -135,7 +136,7 @@ export function DownloadApps() {
         </motion.div>
       </div>
 
-      {/* Additional Info */}
+      {/* Stats Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -145,15 +146,15 @@ export function DownloadApps() {
       >
         <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           <div>
-            <div className="text-2xl font-bold text-royal-600 mb-1">4.7★</div>
+            <div className="text-3xl font-extrabold tracking-tight text-gray-900 mb-1">4.7★</div>
             <div className="text-sm text-gray-600">Google Play Rating</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-teal-600 mb-1">1,000+</div>
+            <div className="text-3xl font-extrabold tracking-tight text-gray-900 mb-1">10,000+</div>
             <div className="text-sm text-gray-600">Active Users</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-indigo-600 mb-1">99.9%</div>
+            <div className="text-3xl font-extrabold tracking-tight text-gray-900 mb-1">99.9%</div>
             <div className="text-sm text-gray-600">Uptime</div>
           </div>
         </div>

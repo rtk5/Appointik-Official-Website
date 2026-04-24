@@ -101,7 +101,7 @@ export function SuccessStoriesSection() {
           Real results from healthcare professionals
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Discover how 1,000+ doctors across India are transforming their clinics with Appointik
+          Discover how 10,000+ doctors across India are transforming their clinics with Appointik
         </p>
       </motion.div>
 

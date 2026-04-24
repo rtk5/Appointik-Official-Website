@@ -7,7 +7,7 @@ import { TrendingUp, Users, Clock, Star, Shield, Globe } from 'lucide-react';
 const metrics = [
   {
     icon: Users,
-    value: '1,000+',
+    value: '10,000+',
     label: 'Healthcare Professionals',
     description: 'Trust Appointik for their daily operations',
     color: 'bg-royal-100 text-royal-600'
@@ -30,7 +30,7 @@ const metrics = [
     icon: Star,
     value: '4.7★',
     label: 'Google Play Rating',
-    description: 'From 1,000+ verified reviews',
+    description: 'From 10,000+ verified reviews',
     color: 'bg-yellow-100 text-yellow-600'
   },
   {
