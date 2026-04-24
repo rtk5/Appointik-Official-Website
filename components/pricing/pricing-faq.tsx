@@ -122,18 +122,12 @@ export function PricingFAQ() {
               Email Support
             </a>
             <Button 
-              onClick={() => {
-                // This will trigger the WhatsApp widget
-                const whatsappWidget = document.querySelector('[data-whatsapp-widget]');
-                if (whatsappWidget) {
-                  (whatsappWidget as HTMLElement).click();
-                }
-              }}
-              className="inline-flex items-center justify-center px-6 py-3 border border-teal-200 hover:bg-teal-50 text-teal-700 rounded-2xl font-medium transition-colors bg-transparent"
-            >
-              <MessageCircle className="w-4 h-4 mr-2" />
-              WhatsApp Us
-            </Button>
+            onClick={() => window.open('https://wa.me/919663144725?text=Hi%20I%27m%20interested%20in%20Appointik', '_blank')}
+            className="inline-flex items-center justify-center px-6 py-3 border border-teal-200 hover:bg-teal-50 text-teal-700 rounded-2xl font-medium transition-colors bg-transparent"
+          >
+            <MessageCircle className="w-4 h-4 mr-2" />
+            WhatsApp Us
+          </Button>
           </div>
         </Card>
       </motion.div>
