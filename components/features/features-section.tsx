@@ -258,10 +258,9 @@ export function FeaturesSection() {
                     <activeFeature.icon className="w-10 h-10 text-royal-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {activeFeature.title} Demo
+                    {activeFeature.title} 
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    Interactive demo coming soon
                   </p>
                 </div>
               </div>
