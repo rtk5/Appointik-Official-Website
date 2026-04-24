@@ -6,10 +6,12 @@ import Image from 'next/image';
 const footerLinks = {
   product: [
     { name: 'Appointik App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik' },
-    { name: 'Appointik G App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointikg' },
-    { name: 'Features', href: '/features' },
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'AppointikG App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointikg' },
+    // { name: 'Features', href: '/features' },
+    // { name: 'Pricing', href: '/pricing' },
     { name: 'Appointik Web App', href: 'https://webapp.appointik.in/' },
+    { name: 'Booking Portal', href: 'https://appointik.in/demo/' },
+
   ],
   resources: [
     { name: 'Blogs', href: 'https://appointik.blogspot.com/' },
