@@ -51,7 +51,7 @@ const plans = [
     description: 'Best for clinics starting out. Full core features with ads.',
     price: {
       monthly: 125,
-      annual: 100,
+      annual: 112.5,
       currency: '₹',
       unit: 'per month',
       usdEquivalent: '$1.75 per month',
@@ -78,10 +78,10 @@ const plans = [
     id: 'own-device',
     name: 'Own-Device',
     icon: Smartphone,
-    description: 'Use your phone for SMS – most popular choice',
+    description: 'Use your phone for SMS and WhatsApp – most popular choice',
     price: {
       monthly: 200,
-      annual: 175,
+      annual: 180,
       currency: '₹',
       unit: 'per month',
       usdEquivalent: '$2.75 per month'
@@ -109,7 +109,7 @@ const plans = [
     description: 'Includes SMS credits for high-volume practices',
     price: {
       monthly: 400,
-      annual: 319,
+      annual: 360,
       currency: '₹',
       unit: 'per month',
       included: '500 SMS included'
@@ -181,7 +181,7 @@ export function PricingSection() {
           </div>
 
           <Badge className="ml-3 bg-teal-100 text-teal-700 self-center">
-            Save 15%
+            Save 10%
           </Badge>
         </div>
 
