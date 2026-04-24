@@ -9,6 +9,7 @@ const footerLinks = {
     { name: 'Appointik G App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointikg' },
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
+    { name: 'Appointik Web App', href: 'https://webapp.appointik.in/' },
   ],
   resources: [
     { name: 'Blogs', href: 'https://appointik.blogspot.com/' },
