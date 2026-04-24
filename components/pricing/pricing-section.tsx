@@ -259,25 +259,6 @@ export function PricingSection() {
         })}
       </div>
 
-      {/* Bottom CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        className="text-center mt-16"
-      >
-        <Card className="p-8 rounded-3xl max-w-2xl mx-auto bg-gradient-to-r from-royal-50 to-teal-50">
-          <h3 className="text-2xl font-bold mb-4">
-            Need a custom solution?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Enterprise plans for hospitals & large clinic chains
-          </p>
-          <Button asChild variant="outline">
-            <Link href="/coming-soon">Contact Sales</Link>
-          </Button>
-        </Card>
-      </motion.div>
     </section>
   );
 }

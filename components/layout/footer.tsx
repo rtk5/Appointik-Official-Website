@@ -6,12 +6,10 @@ import Image from 'next/image';
 const footerLinks = {
   product: [
     { name: 'Appointik App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik' },
-    // { name: 'Features', href: '/features' },
-    // { name: 'Pricing', href: '/pricing' },
     { name: 'Appointik Web App', href: 'https://webapp.appointik.in/' },
     { name: 'Appointik Patient App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik.patient' },
     { name: 'Booking Portal', href: 'https://appointik.in/demo/' },
-    { name: 'Booking Portal (Time Slots)', href: 'https://appointik.in/demo/' },
+    { name: 'Booking Portal (Time Slots)', href: 'https://appointik.in/demotimeslot/' },
     { name: 'AppointikG App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointikg' },
 
   ],
