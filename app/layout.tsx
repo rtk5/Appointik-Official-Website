@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     default: 'Appointik - Run Your Clinic on Autopilot',
   },
   description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals. Appointments, EMR & billing in one app. Starting at ₹175/month.',
+  
+  // ✅ FAVICON ADDED HERE
+  icons: {
+    icon: '/logo-square.png',
+    shortcut: '/logo-square.png',
+    apple: '/logo-square.png',
+  },
+
   keywords: [
     'clinic management software',
     'appointment scheduling',
@@ -29,6 +37,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Appointik' }],
   creator: 'Appointik',
+
   openGraph: {
     type: 'website',
     locale: 'en_IN',
@@ -45,12 +54,14 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'Appointik - Run Your Clinic on Autopilot',
     description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals.',
     images: ['/og-image.jpg'],
   },
+
   robots: {
     index: true,
     follow: true,
@@ -62,6 +73,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+
   verification: {
     google: 'your-google-verification-code',
   },
