@@ -54,7 +54,7 @@ const plans = [
       annual: 100,
       currency: '₹',
       unit: 'per month',
-      usdEquivalent: '~$1.75',
+      usdEquivalent: '$1.75 per month',
       validity: '1 month free on 1 year subscription'
     },
     features: [
@@ -84,7 +84,7 @@ const plans = [
       annual: 175,
       currency: '₹',
       unit: 'per month',
-      usdEquivalent: '~$2.75'
+      usdEquivalent: '$2.75 per month'
     },
     features: [
       'Unlimited Appointments',
