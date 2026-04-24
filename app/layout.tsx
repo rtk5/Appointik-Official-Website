@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   
   // ✅ FAVICON ADDED HERE
   icons: {
-    icon: '/logo-square.png',
-    shortcut: '/logo-square.png',
-    apple: '/logo-square.png',
+    icon: '/logo-square-removebg-preview.png',
+    shortcut: '/logo-square-removebg-preview.png',
+    apple: '/logo-square-removebg-preview.png',
   },
 
   keywords: [
