@@ -50,7 +50,7 @@ const plans = [
     icon: Zap,
     description: 'Best for clinics starting out. Full core features with ads.',
     price: {
-      monthly: 100,
+      monthly: 125,
       annual: 100,
       currency: '₹',
       unit: 'per month',
@@ -58,14 +58,17 @@ const plans = [
       validity: '1 month free on 1 year subscription'
     },
     features: [
-      'Unlimited appointments & patients',
-      'Complete EMR/EHR system',
-      'Digital prescriptions',
-      'Clinic, lab & dispensary billing',
-      'Offline mode with sync',
-      'Online booking portal',
-      'Buy SMS credits as needed',
-      'Secure cloud backups'
+      'Unlimited Appointments',
+      'Unlimited e-Prescriptions',
+      'Unlimited Documents (EMR / EHR)',
+      'Unlimited Billing & Payment Receipts',
+      'Unlimited Patients, Doctors & Consultants',
+      'Unlimited Calendar Event Notifications',
+      'Secure Custom Web Portal (Free Version)',
+      'Unlimited SMS & WhatsApp Notifications',
+      "Notifications are sent from USER'S DEVICE",
+      'Regional Languages Supported',
+      '1 Month FREE Trial Period'
     ],
     popular: false,
     razorpayButtonId: 'pl_Q1DhFG4bNjunj5',
@@ -77,21 +80,24 @@ const plans = [
     icon: Smartphone,
     description: 'Use your phone for SMS – most popular choice',
     price: {
-      monthly: 185,
+      monthly: 200,
       annual: 175,
       currency: '₹',
       unit: 'per month',
       usdEquivalent: '~$2.5'
     },
     features: [
-      'Everything in Pay-As-You-Go',
-      'Unlimited SMS via your phone',
-      'WhatsApp integration',
-      'Multi-device sync',
-      'Priority support',
-      'Advanced analytics',
-      'Custom templates',
-      'API access'
+      'Unlimited Appointments',
+      'Unlimited e-Prescriptions',
+      'Unlimited Documents (EMR / EHR)',
+      'Unlimited Billing & Payment Receipts',
+      'Unlimited Patients, Doctors & Consultants',
+      'Unlimited Calendar Event Notifications',
+      'Secure Custom Web Portal (Free Version)',
+      'Unlimited SMS & WhatsApp Notifications',
+      "Notifications are sent from USER'S DEVICE",
+      'Regional Languages Supported',
+      '1 Month FREE Trial Period'
     ],
     popular: true,
     razorpayButtonId: 'pl_Q1DhFG4bNjunj5'
@@ -102,21 +108,24 @@ const plans = [
     icon: MessageSquare,
     description: 'Includes SMS credits for high-volume practices',
     price: {
-      monthly: 375,
+      monthly: 400,
       annual: 319,
       currency: '₹',
       unit: 'per month',
       included: '500 SMS included'
     },
     features: [
-      'Everything in Own-Device',
-      '500 SMS credits included',
-      'Automated reminders',
-      'Bulk SMS campaigns',
-      'Delivery reports',
-      'SMS analytics',
-      'Advanced scheduling',
-      'Dedicated account manager'
+      'Unlimited Appointments',
+      'Unlimited e-Prescriptions',
+      'Unlimited Documents (EMR / EHR)',
+      'Unlimited Billing & Payment Receipts',
+      'Unlimited Patients, Doctors & Consultants',
+      'Unlimited Calendar Event & WhatsApp Notifications',
+      'Secure Custom Web Portal Included',
+      '500 SMS Notifications (English)',
+      'SMS Notifications are sent from the app',
+      'Regional Languages Supported (except SMS)',
+      '1 Week Free Trial Period'
     ],
     popular: false,
     razorpayButtonId: 'pl_Q1DrVwVzFzSBTE'
