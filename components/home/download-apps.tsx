@@ -78,7 +78,7 @@ export function DownloadApps() {
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              A flexible appointment scheduling app for clinics, salons,
+              A flexible appointment scheduling app for salons,
               consultancies, and service-based businesses.
             </p>
 
@@ -149,7 +149,7 @@ export function DownloadApps() {
             <div className="text-sm text-gray-600">Google Play Rating</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-teal-600 mb-1">1,000+</div>
+            <div className="text-2xl font-bold text-teal-600 mb-1">10,000+</div>
             <div className="text-sm text-gray-600">Active Users</div>
           </div>
           <div>
