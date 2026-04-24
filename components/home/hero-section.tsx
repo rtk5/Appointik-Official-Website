@@ -139,10 +139,8 @@ export function HeroSection() {
               transition={{ duration: 2, repeat: Infinity }}
               className="absolute -top-4 -right-4 bg-teal-500 text-white rounded-2xl p-4 shadow-lg"
             >
-              <div className="text-sm font-medium">
-                Revenue This Month
-              </div>
-              <div className="text-2xl font-bold">₹2,45,000</div>
+              
+              <div className="text-2xl font-bold">10K+ downloads</div>
             </motion.div>
 
             <motion.div
