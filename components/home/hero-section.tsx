@@ -21,7 +21,7 @@ export function HeroSection() {
           >
             <div className="inline-flex items-center space-x-2 bg-royal-50 text-royal-700 px-4 py-2 rounded-full text-sm font-medium">
               <Star className="w-4 h-4 fill-current" />
-              <span>Trusted by 1,000+ healthcare professionals</span>
+              <span>Trusted by 10,000+ healthcare professionals</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
@@ -31,7 +31,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed">
-              Loved by 1,000+ healthcare professionals across India & beyond.
+              Loved by 10,000+ healthcare professionals across India & beyond.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -139,8 +139,10 @@ export function HeroSection() {
               transition={{ duration: 2, repeat: Infinity }}
               className="absolute -top-4 -right-4 bg-teal-500 text-white rounded-2xl p-4 shadow-lg"
             >
-              
-              <div className="text-2xl font-bold">10K+ downloads</div>
+              <div className="text-sm font-medium">
+                Revenue This Month
+              </div>
+              <div className="text-2xl font-bold">₹2,45,000</div>
             </motion.div>
 
             <motion.div
