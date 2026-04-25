@@ -16,7 +16,7 @@ const badges = [
   },
   {
     icon: Users,
-    title: '5,000+',
+    title: '1,000+',
     description: 'Healthcare professionals',
   },
   {

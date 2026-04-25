@@ -149,7 +149,7 @@ export function DownloadApps() {
             <div className="text-sm text-gray-600">Google Play Rating</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-teal-600 mb-1">10,000+</div>
+            <div className="text-2xl font-bold text-teal-600 mb-1">1,000+</div>
             <div className="text-sm text-gray-600">Active Users</div>
           </div>
           <div>

@@ -37,7 +37,7 @@ export function Footer() {
               <span className="text-xl font-bold text-gray-900">Appointik</span>
             </Link>
             <p className="text-gray-600 mb-6 max-w-sm">
-              Lightweight clinic management software trusted by 10,000+ healthcare professionals across India and beyond.
+              Lightweight clinic management software trusted by 1,000+ healthcare professionals across India and beyond.
             </p>
             <div className="space-y-2 text-sm text-gray-600">
               <div className="flex items-center space-x-2">

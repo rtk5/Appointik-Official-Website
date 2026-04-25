@@ -14,7 +14,7 @@ import { MessageCircle } from 'lucide-react';
 const faqs = [
   {
     question: 'Is there a free trial available?',
-    answer: 'Yes! Our Basic Plan (With Ads) is available at ₹100/month and includes a 1-month free trial when you choose an annual subscription. Higher plans also include free trial periods so you can explore all features before committing.'
+    answer: 'Yes! Our Basic Plan (With Ads) is available at ₹100/month. Higher plans also include free trial periods so you can explore all features before committing.'
   },
   {
     question: 'Can I switch between plans?',
@@ -115,19 +115,21 @@ export function PricingFAQ() {
             Our support team is here to help you choose the right plan for your clinic.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="mailto:appointikteam@gmail.com"
-              className="inline-flex items-center justify-center px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-2xl font-medium transition-colors"
+            <Button
+              asChild
+              className="inline-flex items-center justify-center h-12 px-6 bg-teal-500 hover:bg-teal-600 text-white rounded-2xl font-medium transition-colors"
             >
-              Email Support
-            </a>
+              <a href="mailto:appointikteam@gmail.com">
+                Email Support
+              </a>
+            </Button>
             <Button 
-            onClick={() => window.open('https://wa.me/919663144725?text=Hi%20I%27m%20interested%20in%20Appointik', '_blank')}
-            className="inline-flex items-center justify-center px-6 py-3 border border-teal-200 hover:bg-teal-50 text-teal-700 rounded-2xl font-medium transition-colors bg-transparent"
-          >
-            <MessageCircle className="w-4 h-4 mr-2" />
-            WhatsApp Us
-          </Button>
+              onClick={() => window.open('https://wa.me/919663144725?text=Hi%20I%27m%20interested%20in%20Appointik', '_blank')}
+              className="inline-flex items-center justify-center h-12 px-6 bg-teal-500 hover:bg-teal-600 text-white rounded-2xl font-medium transition-colors"
+            >
+              <MessageCircle className="w-4 h-4 mr-2" />
+              WhatsApp Us
+            </Button>
           </div>
         </Card>
       </motion.div>

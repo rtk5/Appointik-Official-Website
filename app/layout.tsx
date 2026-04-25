@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: '%s | Appointik - Lightweight Clinic Management Software',
     default: 'Appointik - Run Your Clinic on Autopilot',
   },
-  description: 'Lightweight clinic management software loved by 10,000+ healthcare professionals. Appointments, EMR & billing in one app. Starting at ₹175/month.',
+  description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals. Appointments, EMR & billing in one app. Starting at ₹175/month.',
   
   // ✅ FAVICON ADDED HERE
   icons: {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://appointik.com',
     title: 'Appointik - Run Your Clinic on Autopilot',
-    description: 'Lightweight clinic management software loved by 10,000+ healthcare professionals. Appointments, EMR & billing in one app.',
+    description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals. Appointments, EMR & billing in one app.',
     siteName: 'Appointik',
     images: [
       {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Appointik - Run Your Clinic on Autopilot',
-    description: 'Lightweight clinic management software loved by 10,000+ healthcare professionals.',
+    description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals.',
     images: ['/og-image.jpg'],
   },
 

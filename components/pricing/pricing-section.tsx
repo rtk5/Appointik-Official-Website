@@ -54,8 +54,7 @@ const plans = [
       annual: 112.5,
       currency: '₹',
       unit: 'per month',
-      usdEquivalent: '$1.75 per month',
-      validity: '1 month free on 1 year subscription'
+      usdEquivalent: '$1.75 per month'
     },
     features: [
       'Unlimited Appointments',
@@ -76,7 +75,7 @@ const plans = [
   },
   {
     id: 'own-device',
-    name: 'Own-Device',
+    name: 'Own Device Plan',
     icon: Smartphone,
     description: 'Use your phone for SMS and WhatsApp – most popular choice',
     price: {
@@ -233,11 +232,6 @@ export function PricingSection() {
                   {plan.price.usdEquivalent && (
                     <div className="text-sm text-gray-500">
                       {plan.price.usdEquivalent}
-                    </div>
-                  )}
-                  {plan.price.validity && (
-                    <div className="text-sm text-gray-500">
-                      {plan.price.validity}
                     </div>
                   )}
                 </div>

@@ -1,4 +1,4 @@
-// File: C:\Users\rithv\appointik website\project\app\pricing\page.tsx
+// File: /Users/rajeshmatta/Projects/AppointikNextJSWebsite/Appointik-Official-Website/app/pricing/page.tsx
 import * as entry from '../../../../app/pricing/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
