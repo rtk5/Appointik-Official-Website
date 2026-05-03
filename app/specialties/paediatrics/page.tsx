@@ -7,6 +7,9 @@ import { SpecialtyCTA } from '@/components/specialties/specialty-cta';
 export const metadata: Metadata = {
   title: 'Pediatric Clinic Management Software - Appointik',
   description: 'Child-friendly clinic management with growth tracking, vaccination schedules, and parent communication tools. Perfect for pediatricians.',
+  alternates: {
+    canonical: '/specialties/paediatrics',
+  },
 };
 
 const paediatricsData = {

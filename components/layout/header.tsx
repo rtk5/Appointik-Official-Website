@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Stethoscope, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navigation = [
@@ -15,6 +15,9 @@ const navigation = [
   { name: 'Pricing', href: '/pricing' },
   { name: 'Success Stories', href: '/success-stories' },
 ];
+
+const doctorLoginUrl = 'https://clinic.appointik.in/login';
+const patientAppUrl = 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik.patient';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,7 +59,7 @@ export function Header() {
 
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -72,24 +75,38 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             <Button
               asChild
-              className="bg-royal-500 hover:bg-royal-600 text-white rounded-2xl px-6 py-2 font-medium focus-outline"
+              variant="outline"
+              className="border-royal-500 text-royal-700 hover:bg-royal-50 rounded-2xl px-5 py-2 font-medium focus-outline"
             >
-              <a 
-                href="https://play.google.com/store/apps/details?id=com.samrithtech.appointik"
+              <a
+                href={doctorLoginUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Start Free Trial
+                Doctor Login
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-teal-500 text-teal-700 hover:bg-teal-50 rounded-2xl px-5 py-2 font-medium focus-outline"
+            >
+              <a
+                href={patientAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Patient Login
               </a>
             </Button>
           </div>
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" className="focus-outline">
                 <Menu className="w-6 h-6" />
                 <span className="sr-only">Toggle menu</span>
@@ -111,19 +128,36 @@ export function Header() {
                   </Link>
                 ))}
                 <div className="pt-6 border-t">
-                  <Button
-                    asChild
-                    className="w-full bg-royal-500 hover:bg-royal-600 text-white rounded-2xl"
-                  >
-                    <a 
-                      href="https://play.google.com/store/apps/details?id=com.samrithtech.appointik"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => setIsOpen(false)}
+                  <div className="grid gap-3 mb-3">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-royal-500 text-royal-700 hover:bg-royal-50 rounded-2xl"
                     >
-                      Start Free Trial
-                    </a>
-                  </Button>
+                      <a
+                        href={doctorLoginUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Doctor Login
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-teal-500 text-teal-700 hover:bg-teal-50 rounded-2xl"
+                    >
+                      <a
+                        href={patientAppUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Patient Login
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </nav>
             </SheetContent>

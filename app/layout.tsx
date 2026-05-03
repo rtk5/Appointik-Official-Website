@@ -12,12 +12,47 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | Appointik - Lightweight Clinic Management Software',
-    default: 'Appointik - Run Your Clinic on Autopilot',
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Appointik',
+  legalName: 'Samrith Technologies',
+  url: 'https://appointik.in',
+  logo: 'https://appointik.in/logo-square.png',
+  email: 'appointikteam@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Bangalore',
+    addressRegion: 'Karnataka',
+    addressCountry: 'IN',
   },
-  description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals. Appointments, EMR & billing in one app. Starting at ₹175/month.',
+  sameAs: [
+    'https://play.google.com/store/apps/details?id=com.samrithtech.appointik',
+    'https://play.google.com/store/apps/details?id=com.samrithtech.appointik.patient',
+    'https://appointik.blogspot.com/',
+  ],
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Appointik',
+  url: 'https://appointik.in',
+  description:
+    'Affordable clinic management software for appointments, EMR, billing, prescriptions and patient records.',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Appointik',
+  },
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://appointik.in'),
+  title: {
+    template: '%s | Appointik Clinic Software',
+    default: 'Appointik - Affordable Clinic Management Software',
+  },
+  description: 'Affordable clinic management software loved by 1,000+ healthcare professionals. Manage appointments, EMR, billing, prescriptions and patient records from ₹125/month.',
   
   // ✅ FAVICON ADDED HERE
   icons: {
@@ -28,6 +63,10 @@ export const metadata: Metadata = {
 
   keywords: [
     'clinic management software',
+    'clinic software',
+    'affordable clinic software',
+    'budget clinic software',
+    'cheap clinic software',
     'appointment scheduling',
     'EMR software',
     'healthcare software',
@@ -41,9 +80,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://appointik.com',
-    title: 'Appointik - Run Your Clinic on Autopilot',
-    description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals. Appointments, EMR & billing in one app.',
+    url: 'https://appointik.in',
+    title: 'Appointik - Affordable Clinic Management Software',
+    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions and patient records. Plans start at ₹125/month.',
     siteName: 'Appointik',
     images: [
       {
@@ -57,8 +96,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Appointik - Run Your Clinic on Autopilot',
-    description: 'Lightweight clinic management software loved by 1,000+ healthcare professionals.',
+    title: 'Appointik - Affordable Clinic Management Software',
+    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions and patient records.',
     images: ['/og-image.jpg'],
   },
 
@@ -73,10 +112,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-
-  verification: {
-    google: 'your-google-verification-code',
-  },
 };
 
 export default function RootLayout({
@@ -86,6 +121,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className="antialiased bg-slate-50 text-gray-900">
         <Header />
         <main className="min-h-screen">

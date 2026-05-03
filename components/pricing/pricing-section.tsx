@@ -51,7 +51,7 @@ const plans = [
     description: 'Best for clinics starting out. Full core features with ads.',
     price: {
       monthly: 125,
-      annual: 112.5,
+      annual: 115,
       currency: '₹',
       unit: 'per month',
       usdEquivalent: '$1.75 per month'
@@ -67,10 +67,11 @@ const plans = [
       'Unlimited SMS & WhatsApp Notifications',
       "Notifications are sent from USER'S DEVICE",
       'Regional Languages Supported',
+      'Patient App included',
       '1 Month FREE Trial Period'
     ],
     popular: false,
-    razorpayButtonId: 'pl_Q1DhFG4bNjunj5',
+    razorpayButtonId: 'pl_SkUTgVT7n5sHHs',
     regionNote: 'Available worldwide'
   },
   {
@@ -80,7 +81,7 @@ const plans = [
     description: 'Use your phone for SMS and WhatsApp – most popular choice',
     price: {
       monthly: 200,
-      annual: 180,
+      annual: 184,
       currency: '₹',
       unit: 'per month',
       usdEquivalent: '$2.75 per month'
@@ -96,6 +97,7 @@ const plans = [
       'Unlimited SMS & WhatsApp Notifications',
       "Notifications are sent from USER'S DEVICE",
       'Regional Languages Supported',
+      'Clinic Web and Patient Apps included',
       '1 Month FREE Trial Period'
     ],
     popular: true,
@@ -108,7 +110,7 @@ const plans = [
     description: 'Includes SMS credits for high-volume practices',
     price: {
       monthly: 400,
-      annual: 360,
+      annual: 368,
       currency: '₹',
       unit: 'per month',
       included: '500 SMS included'
@@ -124,6 +126,7 @@ const plans = [
       '500 SMS Notifications (English)',
       'SMS Notifications are sent from the app',
       'Regional Languages Supported (except SMS)',
+      'Clinic Web and Patient Apps included',
       '1 Week Free Trial Period'
     ],
     popular: false,
@@ -148,10 +151,10 @@ export function PricingSection() {
         className="text-center mb-16"
       >
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Simple, transparent pricing
+          Affordable clinic software pricing
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Choose the perfect plan for your clinic
+          Choose budget-friendly clinic management software for appointments, EMR, billing, prescriptions and patient reminders. Start at just ₹125/month.
         </p>
 
         <div className="flex justify-center">
@@ -180,7 +183,7 @@ export function PricingSection() {
           </div>
 
           <Badge className="ml-3 bg-teal-100 text-teal-700 self-center">
-            Save 10%
+            Save 8%
           </Badge>
         </div>
 
@@ -202,7 +205,7 @@ export function PricingSection() {
               <Card
                 className={`relative p-8 h-full rounded-3xl bg-white ${
                   plan.popular
-                    ? 'border-2 border-royal-200 shadow-2xl scale-105'
+                    ? 'border-2 border-royal-100 shadow-2xl scale-105'
                     : 'border border-gray-200 shadow-lg'
                 }`}
               >

@@ -43,7 +43,7 @@ export function SpecialtyTestimonials({ testimonials }: SpecialtyTestimonialsPro
             viewport={{ once: true }}
           >
             <Card className="p-8 h-full bg-white shadow-lg rounded-3xl border-0">
-              <Quote className="w-10 h-10 text-royal-200 mb-6" />
+              <Quote className="w-10 h-10 text-royal-100 mb-6" />
               
               <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed">
                 "{testimonial.quote}"

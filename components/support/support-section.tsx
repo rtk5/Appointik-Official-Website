@@ -375,7 +375,7 @@ ${formData.comments}`
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
             <div className="space-y-3">
               <a 
-                href="https://play.google.com/store/apps/details?id=com.samrithtech.appointik"
+                href="https://clinic.appointik.in/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-600 hover:text-royal-600 transition-colors"

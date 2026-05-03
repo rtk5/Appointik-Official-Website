@@ -7,6 +7,9 @@ import { SpecialtyCTA } from '@/components/specialties/specialty-cta';
 export const metadata: Metadata = {
   title: 'Dental Clinic Management Software - Appointik',
   description: 'Complete dental practice management software with appointment scheduling, patient records, treatment plans, and billing. Trusted by dental professionals.',
+  alternates: {
+    canonical: '/specialties/dental',
+  },
 };
 
 const dentalData = {

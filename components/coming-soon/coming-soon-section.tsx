@@ -63,10 +63,10 @@ export function ComingSoonSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="rounded-2xl px-8 py-3 border-2 border-gray-200 hover:border-royal-200 font-semibold"
+                className="rounded-2xl px-8 py-3 border-2 border-gray-200 hover:border-royal-500 font-semibold"
               >
                 <a 
-                  href="https://play.google.com/store/apps/details?id=com.samrithtech.appointik"
+                  href="https://clinic.appointik.in/login"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

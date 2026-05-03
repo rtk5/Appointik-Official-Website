@@ -49,7 +49,7 @@ export function SpecialtyHero({ data }: SpecialtyHeroProps) {
               className="bg-royal-500 hover:bg-royal-600 text-white rounded-2xl px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all focus-outline"
             >
               <a 
-                href="https://play.google.com/store/apps/details?id=com.samrithtech.appointik"
+                href="https://clinic.appointik.in/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2"
@@ -63,7 +63,7 @@ export function SpecialtyHero({ data }: SpecialtyHeroProps) {
               asChild
               variant="outline"
               size="lg"
-              className="rounded-2xl px-8 py-3 border-2 border-gray-200 hover:border-royal-200 font-semibold focus-outline"
+              className="rounded-2xl px-8 py-3 border-2 border-gray-200 hover:border-royal-500 font-semibold focus-outline"
             >
               <Link href="/features">View All Features</Link>
             </Button>
@@ -98,7 +98,7 @@ export function SpecialtyHero({ data }: SpecialtyHeroProps) {
           <Card className="overflow-hidden rounded-3xl shadow-2xl border-0">
             <img
               src={data.image}
-              alt="Specialty clinic"
+              alt={data.title}
               className="w-full h-96 object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-royal-900/20 to-transparent"></div>

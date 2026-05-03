@@ -195,7 +195,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
       <div className="grid md:grid-cols-2 gap-8 items-center">
         {/* Quote Content */}
         <div className="space-y-6">
-          <Quote className="w-12 h-12 text-royal-200" />
+          <Quote className="w-12 h-12 text-royal-100" />
           
           <blockquote className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
             "{testimonial.quote}"

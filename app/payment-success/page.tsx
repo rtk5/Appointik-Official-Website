@@ -7,6 +7,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Payment Successful - Welcome to Appointik',
   description: 'Your payment was successful. Download the app and start managing your clinic efficiently.',
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function PaymentSuccessPage() {
@@ -67,7 +71,7 @@ export default function PaymentSuccessPage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="rounded-2xl px-8 py-3 border-2 border-gray-200 hover:border-royal-200 font-semibold"
+                  className="rounded-2xl px-8 py-3 border-2 border-gray-200 hover:border-royal-500 font-semibold"
                 >
                   <Link href="/support" className="flex items-center space-x-2">
                     <span>Get Support</span>

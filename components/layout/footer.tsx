@@ -1,35 +1,65 @@
 import Link from 'next/link';
-import { Stethoscope, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 
 const footerLinks = {
   product: [
-    { name: 'Appointik App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik' },
-    { name: 'Appointik Web App', href: 'https://webapp.appointik.in/' },
-    { name: 'Appointik Patient App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik.patient' },
+    { name: 'Clinic Web App', href: 'https://clinic.appointik.in/login' },
+    { name: 'Clinic Mobile App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik' },
+    { name: 'Patient Mobile App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointik.patient' },
+    { name: 'Appointik G Mobile App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointikg' },
     { name: 'Booking Portal', href: 'https://appointik.in/demo/' },
     { name: 'Booking Portal (Time Slots)', href: 'https://appointik.in/demotimeslot/' },
-    { name: 'AppointikG App', href: 'https://play.google.com/store/apps/details?id=com.samrithtech.appointikg' },
-
   ],
   resources: [
+    { name: 'Clinic Software Features', href: '/features' },
+    { name: 'Affordable Clinic Software Pricing', href: '/pricing' },
     { name: 'Blogs', href: 'https://appointik.blogspot.com/' },
     { name: 'Success Stories', href: '/success-stories' },
     { name: 'Support', href: '/support' },
   ],
+  specialties: [
+    { name: 'Dental Clinic Software', href: '/specialties/dental' },
+    { name: 'Physiotherapy Clinic Software', href: '/specialties/physiotherapy' },
+    { name: 'Pediatric Clinic Software', href: '/specialties/paediatrics' },
+    { name: 'Ayurveda Clinic Software', href: '/specialties/ayurveda' },
+  ],
   company: [
-    { name: 'About Us', href: '/coming-soon' },
     { name: 'Contact', href: '/support' },
     { name: 'Privacy Policy', href: 'https://appointik.in/privacy.html' },
   ],
 };
 
+function FooterLink({ href, name }: { href: string; name: string }) {
+  if (href.startsWith('http')) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-gray-600 hover:text-royal-600 transition-colors"
+      >
+        {name}
+      </a>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      className="text-gray-600 hover:text-royal-600 transition-colors"
+    >
+      {name}
+    </Link>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="bg-gray-50 border-t">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-4">
@@ -57,23 +87,7 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
-                  {link.href.startsWith('http') ? (
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-royal-600 transition-colors"
-                    >
-                      {link.name}
-                    </a>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="text-gray-600 hover:text-royal-600 transition-colors"
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                  <FooterLink href={link.href} name={link.name} />
                 </li>
               ))}
             </ul>
@@ -85,12 +99,19 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-600 hover:text-royal-600 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
+                  <FooterLink href={link.href} name={link.name} />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Specialty Links */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Specialties</h3>
+            <ul className="space-y-2">
+              {footerLinks.specialties.map((link) => (
+                <li key={link.name}>
+                  <FooterLink href={link.href} name={link.name} />
                 </li>
               ))}
             </ul>
@@ -102,12 +123,7 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-600 hover:text-royal-600 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
+                  <FooterLink href={link.href} name={link.name} />
                 </li>
               ))}
             </ul>

@@ -77,7 +77,7 @@ export function SpecialtyCTA({ specialty }: SpecialtyCTAProps) {
               className="bg-royal-500 hover:bg-royal-600 text-white rounded-2xl px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all"
             >
               <a 
-                href="https://play.google.com/store/apps/details?id=com.samrithtech.appointik"
+                href="https://clinic.appointik.in/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2"
@@ -91,7 +91,7 @@ export function SpecialtyCTA({ specialty }: SpecialtyCTAProps) {
               asChild
               variant="outline"
               size="lg"
-              className="rounded-2xl px-8 py-3 border-2 border-royal-200 hover:bg-royal-50 font-semibold"
+              className="rounded-2xl px-8 py-3 border-2 border-royal-100 hover:bg-royal-50 font-semibold"
             >
               <Link href="/success-stories">View Success Stories</Link>
             </Button>

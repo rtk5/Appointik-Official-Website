@@ -14,7 +14,11 @@ import { MessageCircle } from 'lucide-react';
 const faqs = [
   {
     question: 'Is there a free trial available?',
-    answer: 'Yes! Our Basic Plan (With Ads) is available at ₹100/month. Higher plans also include free trial periods so you can explore all features before committing.'
+    answer: 'Yes! Our Basic Plan (With Ads) starts at ₹125/month. Higher plans also include free trial periods so you can explore all features before committing.'
+  },
+  {
+    question: 'Is Appointik good for clinics looking for budget or cheap clinic software?',
+    answer: 'Yes. Appointik is designed as affordable clinic software for small clinics and independent doctors who need core clinic management features without costly setup, long contracts, or complex enterprise systems.'
   },
   {
     question: 'Can I switch between plans?',
@@ -38,15 +42,15 @@ const faqs = [
   },
   {
     question: 'What payment methods do you accept?',
-    answer: 'We accept all major payment methods including UPI, debit/credit cards, net banking, and digital wallets. International customers can pay via Stripe with credit cards. All payments are processed securely.'
+    answer: 'We accept all major payment methods including UPI, debit/credit cards, net banking, and digital wallets. International customers can pay via PayPal/Razorpay with credit cards. All payments are processed securely.'
   },
   {
     question: 'How do SMS notifications work?',
-    answer: 'In the Basic Plan, SMS notifications are sent directly from the user’s own device, so there are no per-SMS charges. Higher plans offer gateway-based SMS with delivery reports, automation, and bulk messaging features.'
+    answer: 'In the Basic and Own Device Plans, SMS notifications are sent directly from the user’s own device, so there are no per-SMS charges. Higher plans offer gateway-based SMS with delivery reports, automation, and bulk messaging features.'
   },
   {
     question: 'Do you provide training and support?',
-    answer: 'Yes! We provide c24/7 support via email and WhatsApp.'
+    answer: 'Yes! We provide support via email and WhatsApp. We also offer a generous free trial period so you can try the app, experiment with workflows, and make sure it fits your clinic before committing.'
   },
   {
     question: 'Can patients book appointments online?',
@@ -85,7 +89,7 @@ export function PricingFAQ() {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="border border-gray-200 rounded-2xl px-6 py-2 data-[state=open]:bg-royal-50 data-[state=open]:border-royal-200"
+                className="border border-gray-200 rounded-2xl px-6 py-2 data-[state=open]:bg-royal-50 data-[state=open]:border-royal-100"
               >
                 <AccordionTrigger className="text-left font-semibold text-gray-900 hover:text-royal-600 hover:no-underline py-4">
                   {faq.question}

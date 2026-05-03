@@ -7,6 +7,9 @@ import { SpecialtyCTA } from '@/components/specialties/specialty-cta';
 export const metadata: Metadata = {
   title: 'Ayurveda Clinic Management Software - Appointik',
   description: 'Traditional Ayurveda practice management with Prakriti analysis, herbal prescriptions, and Panchakarma treatment tracking.',
+  alternates: {
+    canonical: '/specialties/ayurveda',
+  },
 };
 
 const ayurvedaData = {

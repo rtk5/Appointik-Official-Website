@@ -2,8 +2,11 @@ import { Metadata } from 'next';
 import { FeaturesSection } from '@/components/features/features-section';
 
 export const metadata: Metadata = {
-  title: 'Features - Complete Clinic Management Suite',
-  description: 'Explore all features of Appointik: Patient Management, Appointment Scheduling, EMR/EHR, Billing, E-Prescription, and more.',
+  title: 'Clinic Management Software Features',
+  description: 'Explore Appointik clinic software features: patient management, appointment scheduling, EMR/EHR, billing, e-prescriptions, reminders, reports and web portal.',
+  alternates: {
+    canonical: '/features',
+  },
 };
 
 export default function FeaturesPage() {

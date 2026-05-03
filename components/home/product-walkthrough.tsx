@@ -128,7 +128,7 @@ export function ProductWalkthrough() {
                 <Card 
                   className={`p-6 cursor-pointer transition-all duration-300 ${
                     isActive 
-                      ? 'bg-royal-50 border-royal-200 shadow-lg' 
+                      ? 'bg-royal-50 border-royal-100 shadow-lg' 
                       : 'bg-white hover:bg-gray-50 border-gray-200'
                   }`}
                   onClick={() => setActiveStep(index)}

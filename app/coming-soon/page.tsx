@@ -4,6 +4,10 @@ import { ComingSoonSection } from '@/components/coming-soon/coming-soon-section'
 export const metadata: Metadata = {
   title: 'Coming Soon - Appointik',
   description: 'This feature is coming soon. Stay tuned for updates from Appointik.',
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function ComingSoonPage() {

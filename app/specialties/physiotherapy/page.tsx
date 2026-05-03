@@ -7,6 +7,9 @@ import { SpecialtyCTA } from '@/components/specialties/specialty-cta';
 export const metadata: Metadata = {
   title: 'Physiotherapy Clinic Management Software - Appointik',
   description: 'Specialized physiotherapy practice management with exercise tracking, progress monitoring, and treatment planning. Perfect for physio clinics.',
+  alternates: {
+    canonical: '/specialties/physiotherapy',
+  },
 };
 
 const physiotherapyData = {

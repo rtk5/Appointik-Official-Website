@@ -19,8 +19,8 @@ const benefits = [
   },
   {
     icon: IndianRupee,
-    title: 'Starts at just ₹125/month',
-    description: 'Professional clinic management without breaking the bank. Get all premium features at an affordable price.',
+    title: 'Budget-friendly clinic software',
+    description: 'Start at just ₹125/month. Get professional clinic management without heavy setup fees or complicated enterprise pricing.',
     color: 'bg-green-50 text-green-600',
   },
 ];

@@ -74,7 +74,7 @@ export function DownloadApps() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              AppointikG – Appointment Scheduling App
+              Appointik G – Appointment Scheduling App
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">

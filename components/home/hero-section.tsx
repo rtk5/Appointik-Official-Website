@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const doctorLoginUrl = 'https://clinic.appointik.in/login';
 
 export function HeroSection() {
   return (
@@ -25,13 +26,12 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Run your clinic on{' '}
-              <span className="text-royal-500">autopilot</span>
-              —appointments, EMR & billing in one lightweight app.
+              Affordable clinic management software for{' '}
+              <span className="text-royal-500">appointments, EMR & billing</span>
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed">
-              Loved by 1,000+ healthcare professionals across India & beyond.
+              Appointik is lightweight clinic software for doctors and small clinics that need patient records, scheduling, prescriptions, billing, reminders and reports without expensive setup costs. Plans start at just ₹125/month.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -41,7 +41,7 @@ export function HeroSection() {
                 className="bg-royal-500 hover:bg-royal-600 text-white rounded-2xl px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all focus-outline"
               >
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.samrithtech.appointik"
+                  href={doctorLoginUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2"

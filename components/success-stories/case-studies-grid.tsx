@@ -130,7 +130,7 @@ export function CaseStudiesGrid() {
                       </div>
                     </div>
 
-                    <blockquote className="border-l-4 border-royal-200 pl-4 italic text-gray-700">
+                    <blockquote className="border-l-4 border-royal-100 pl-4 italic text-gray-700">
                       "{study.testimonial}"
                       <footer className="text-sm text-gray-600 mt-2">
                         — {study.doctor}

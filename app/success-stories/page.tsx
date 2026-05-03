@@ -4,8 +4,11 @@ import { CaseStudiesGrid } from '@/components/success-stories/case-studies-grid'
 import { MetricsOverview } from '@/components/success-stories/metrics-overview';
 
 export const metadata: Metadata = {
-  title: 'Success Stories - Real Results from Healthcare Professionals',
-  description: 'Discover how 1,000+ healthcare professionals are transforming their clinics with Appointik. Read testimonials and case studies.',
+  title: 'Clinic Software Success Stories',
+  description: 'Discover how 1,000+ healthcare professionals use Appointik clinic management software to manage appointments, patient records, reminders and billing.',
+  alternates: {
+    canonical: '/success-stories',
+  },
 };
 
 export default function SuccessStoriesPage() {
