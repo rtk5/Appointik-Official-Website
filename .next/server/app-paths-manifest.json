@@ -1,5 +1,16 @@
 {
-  "/not-found": "app/not-found.js",
+  "/_not-found": "app/_not-found.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/page": "app/page.js",
-  "/pricing/page": "app/pricing/page.js"
+  "/features/page": "app/features/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/coming-soon/page": "app/coming-soon/page.js",
+  "/payment-success/page": "app/payment-success/page.js",
+  "/success-stories/page": "app/success-stories/page.js",
+  "/support/page": "app/support/page.js",
+  "/specialties/dental/page": "app/specialties/dental/page.js",
+  "/specialties/physiotherapy/page": "app/specialties/physiotherapy/page.js",
+  "/specialties/paediatrics/page": "app/specialties/paediatrics/page.js",
+  "/specialties/ayurveda/page": "app/specialties/ayurveda/page.js"
 }
