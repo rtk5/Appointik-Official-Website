@@ -22,7 +22,7 @@ const organizationJsonLd = {
   email: 'appointikteam@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Bangalore',
+    addressLocality: 'Bengaluru',
     addressRegion: 'Karnataka',
     addressCountry: 'IN',
   },
@@ -39,7 +39,7 @@ const websiteJsonLd = {
   name: 'Appointik',
   url: 'https://appointik.in',
   description:
-    'Affordable clinic management software for appointments, EMR, billing, prescriptions and patient records.',
+    'Affordable clinic management software for appointments, EMR, billing, prescriptions, patient records, multilingual notifications, patient apps and custom booking portals.',
   publisher: {
     '@type': 'Organization',
     name: 'Appointik',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     template: '%s | Appointik Clinic Software',
     default: 'Appointik - Affordable Clinic Management Software',
   },
-  description: 'Affordable clinic management software loved by 1,000+ healthcare professionals. Manage appointments, EMR, billing, prescriptions and patient records from ₹125/month.',
+  description: 'Affordable clinic management software trusted by clinics in 15+ countries. Manage appointments, EMR, billing, prescriptions, patient records, multilingual notifications, patient apps and custom booking portals from ₹125/month.',
   
   // ✅ FAVICON ADDED HERE
   icons: {
@@ -71,6 +71,12 @@ export const metadata: Metadata = {
     'EMR software',
     'healthcare software',
     'clinic software India',
+    'clinic management software worldwide',
+    'multilingual clinic notifications',
+    'patient booking portal',
+    'clinic web app',
+    'clinic Android app',
+    'clinic software for iPhone',
     'patient management',
     'medical billing software',
   ],
@@ -82,11 +88,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://appointik.in',
     title: 'Appointik - Affordable Clinic Management Software',
-    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions and patient records. Plans start at ₹125/month.',
+    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions, multilingual notifications, patient apps and custom booking portals. Trusted in 15+ countries.',
     siteName: 'Appointik',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Appointik - Clinic Management Software',
@@ -97,8 +103,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Appointik - Affordable Clinic Management Software',
-    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions and patient records.',
-    images: ['/og-image.jpg'],
+    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions, multilingual notifications, patient apps and custom booking portals.',
+    images: ['/og-image.png'],
   },
 
   robots: {

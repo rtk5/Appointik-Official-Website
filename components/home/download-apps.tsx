@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
-import { Smartphone, Calendar, User } from 'lucide-react';
+import { Calendar, MonitorSmartphone, Smartphone, User } from 'lucide-react';
 
 export function DownloadApps() {
   return (
@@ -15,15 +15,15 @@ export function DownloadApps() {
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Download the Apps
+          Complete Clinic Software Package
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Mobile apps designed for doctors, clinics, and patients
+          Clinic Web App, Android app, iPhone-friendly installable web app, Patient App and custom booking portals for every clinic
         </p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-        {/* Appointik – Clinic App */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        {/* Appointik – Clinic Web App */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -33,16 +33,47 @@ export function DownloadApps() {
         >
           <Card className="p-8 bg-gradient-to-br from-royal-50 to-blue-50 border-royal-100 rounded-3xl shadow-lg">
             <div className="w-16 h-16 bg-royal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <MonitorSmartphone className="w-8 h-8 text-white" />
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Clinic Web App
+            </h3>
+
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Run appointments, EMR, billing, prescriptions, patient records and reports from the browser. Install the web app on iPhone for quick iOS access.
+            </p>
+
+            <a
+              href="https://clinic.appointik.in/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-12 px-5 rounded-2xl bg-royal-500 text-white font-semibold hover:bg-royal-600 transition-colors"
+            >
+              Open Web App
+            </a>
+          </Card>
+        </motion.div>
+
+        {/* Appointik – Clinic Android App */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <Card className="p-8 bg-gradient-to-br from-royal-50 to-blue-50 border-royal-100 rounded-3xl shadow-lg">
+            <div className="w-16 h-16 bg-royal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Smartphone className="w-8 h-8 text-white" />
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Appointik – Clinic Management App
+              Clinic Android App
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Complete clinic management solution with EMR, billing, prescriptions,
-              appointments, and patient records.
+              Manage appointments, patient records, prescriptions, billing and multilingual reminders from the Appointik clinic app.
             </p>
 
             <a
@@ -60,47 +91,10 @@ export function DownloadApps() {
           </Card>
         </motion.div>
 
-        {/* Appointik G – General Scheduling */}
+        {/* Appointik Patient App */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <Card className="p-8 bg-gradient-to-br from-royal-50 to-blue-50 border-royal-100 rounded-3xl shadow-lg">
-            <div className="w-16 h-16 bg-royal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Calendar className="w-8 h-8 text-white" />
-            </div>
-
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Appointik G – Appointment Scheduling App
-            </h3>
-
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              A flexible appointment scheduling app for salons,
-              consultancies, and service-based businesses.
-            </p>
-
-            <a
-              href="https://play.google.com/store/apps/details?id=com.samrithtech.appointikg"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block transition-transform hover:scale-105"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Get it on Google Play"
-                className="h-14 mx-auto"
-              />
-            </a>
-          </Card>
-        </motion.div>
-
-        {/* Appointik Patient App */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
           className="text-center"
@@ -115,8 +109,7 @@ export function DownloadApps() {
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              A simple app for patients to book appointments, view prescriptions,
-              access reports, and stay connected with their clinic.
+              Give patients a simple app to book appointments, view prescriptions, access reports and stay connected with their clinic.
             </p>
 
             <a
@@ -130,6 +123,38 @@ export function DownloadApps() {
                 alt="Get it on Google Play"
                 className="h-14 mx-auto"
               />
+            </a>
+          </Card>
+        </motion.div>
+
+        {/* Custom Booking Portal */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <Card className="p-8 bg-gradient-to-br from-royal-50 to-blue-50 border-royal-100 rounded-3xl shadow-lg">
+            <div className="w-16 h-16 bg-royal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Calendar className="w-8 h-8 text-white" />
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Custom Booking Portal
+            </h3>
+
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Each clinic can share a branded appointment booking web portal where patients book available slots online.
+            </p>
+
+            <a
+              href="https://appointik.in/demo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center h-12 px-5 rounded-2xl bg-royal-500 text-white font-semibold hover:bg-royal-600 transition-colors"
+            >
+              View Portal
             </a>
           </Card>
         </motion.div>
@@ -153,8 +178,8 @@ export function DownloadApps() {
             <div className="text-sm text-gray-600">Active Users</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-indigo-600 mb-1">99.9%</div>
-            <div className="text-sm text-gray-600">Uptime</div>
+            <div className="text-2xl font-bold text-indigo-600 mb-1">15+</div>
+            <div className="text-sm text-gray-600">Countries</div>
           </div>
         </div>
       </motion.div>

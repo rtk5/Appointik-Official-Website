@@ -4,9 +4,9 @@ import { PricingFAQ } from '@/components/pricing/pricing-faq';
 
 export const metadata: Metadata = {
   title: 'Pricing - Budget Clinic Software from ₹125/month',
-  description: 'Affordable clinic management software pricing for doctors and small clinics. Start at ₹125/month with appointments, EMR, billing, prescriptions and reminders.',
+  description: 'Affordable clinic management software pricing for clinics worldwide. Start at ₹125/month with EMR, billing, prescriptions, multilingual reminders, patient apps and booking portals.',
   alternates: {
-    canonical: '/pricing',
+    canonical: '/pricing/',
   },
 };
 
@@ -27,7 +27,23 @@ const pricingFaqJsonLd = {
       name: 'Is Appointik good for clinics looking for budget or cheap clinic software?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Appointik is affordable clinic software for small clinics and independent doctors who need core clinic management features without costly setup, long contracts, or complex enterprise systems.',
+        text: 'Yes. Appointik is affordable clinic software for small clinics and independent doctors who need a complete clinic management solution without costly setup, long contracts, or complex enterprise systems.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can clinics outside India use Appointik?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Appointik is used by customers in more than 15 countries for appointments, patient records, billing, prescriptions, reminders and booking portals.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Appointik support multiple notification languages?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Appointik supports notification messages in multiple regional and international languages.',
       },
     },
     {
@@ -43,7 +59,7 @@ const pricingFaqJsonLd = {
       name: 'Can patients book appointments online?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Each clinic gets a branded online booking portal where patients can see availability and book appointments.',
+        text: 'Yes. Each clinic gets a custom branded online booking portal where patients can see availability and book appointments.',
       },
     },
   ],

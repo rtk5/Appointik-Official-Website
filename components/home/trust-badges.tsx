@@ -16,13 +16,13 @@ const badges = [
   },
   {
     icon: Users,
-    title: '1,000+',
-    description: 'Healthcare professionals',
+    title: '15+ Countries',
+    description: 'Global clinic users',
   },
   {
     icon: Globe,
-    title: '99.9% Uptime',
-    description: 'Reliable & fast',
+    title: 'Multilingual',
+    description: 'Patient notifications',
   },
   {
     icon: Clock,

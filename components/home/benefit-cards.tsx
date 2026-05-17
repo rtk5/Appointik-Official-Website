@@ -2,25 +2,25 @@
 
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
-import { Wifi, Clock, IndianRupee } from 'lucide-react';
+import { Globe2, Languages, PackageCheck } from 'lucide-react';
 
 const benefits = [
   {
-    icon: Wifi,
-    title: 'Works offline—syncs when online',
-    description: 'Never lose patient data even when your internet goes down. Everything syncs automatically when you\'re back online.',
+    icon: Globe2,
+    title: 'Trusted across 15+ countries',
+    description: 'Appointik is not limited to one market. Clinics across regions use it for daily appointments, records, billing and patient communication.',
     color: 'bg-blue-50 text-blue-600',
   },
   {
-    icon: Clock,
-    title: 'Self-booking portal 24 × 7',
-    description: 'Patients can book appointments anytime through your personalized booking portal. Reduce phone calls and missed appointments.',
+    icon: Languages,
+    title: 'Multilingual notifications',
+    description: 'Send appointment and reminder messages in multiple regional and international languages to communicate clearly with more patients.',
     color: 'bg-teal-50 text-teal-600',
   },
   {
-    icon: IndianRupee,
-    title: 'Budget-friendly clinic software',
-    description: 'Start at just ₹125/month. Get professional clinic management without heavy setup fees or complicated enterprise pricing.',
+    icon: PackageCheck,
+    title: 'Complete clinic package',
+    description: 'Get Clinic Web App, Android app, iPhone-installable web app, dedicated Patient App and custom appointment booking portals in one solution.',
     color: 'bg-green-50 text-green-600',
   },
 ];
@@ -36,10 +36,10 @@ export function BenefitCards() {
         className="text-center mb-12"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Why thousands of doctors choose Appointik
+          Why clinics worldwide choose Appointik
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Built specifically for global healthcare professionals with features that matter most
+          Built for healthcare professionals who need one affordable platform for clinic operations, patient access and communication
         </p>
       </motion.div>
 

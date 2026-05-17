@@ -6,6 +6,28 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/features",
+        "destination": "/features/",
+        "type": 301
+      },
+      {
+        "source": "/pricing",
+        "destination": "/pricing/",
+        "type": 301
+      },
+      {
+        "source": "/success-stories",
+        "destination": "/success-stories/",
+        "type": 301
+      },
+      {
+        "source": "/support",
+        "destination": "/support/",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",

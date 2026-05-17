@@ -41,6 +41,7 @@ const features = [
       'Schedule multiple appointments at a time',
       'Auto increment next available appointment time',
       'Automated SMS and WhatsApp appointment reminders',
+      'Notification messages in multiple regional and international languages',
       'Patient follow-up scheduling with reminders',
       'Filter appointments by doctor for quick access',
     ]
@@ -136,6 +137,7 @@ const features = [
     features: [
       'Branded patient portal with your clinic information',
       'Online appointment booking with real-time availability',
+      'Custom appointment booking web portal for each clinic',
       'Appointment history and upcoming appointment reminders',
     ]
   },
@@ -167,7 +169,7 @@ export function FeaturesSection() {
           Complete clinic management suite
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Everything you need to run a modern healthcare practice, all in one integrated platform
+          Everything you need to run a modern healthcare practice in one integrated platform: Clinic Web App, Android app, iPhone-installable web app, Patient App and custom booking portal
         </p>
       </motion.div>
 

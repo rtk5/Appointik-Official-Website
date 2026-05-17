@@ -22,16 +22,16 @@ export function HeroSection() {
           >
             <div className="inline-flex items-center space-x-2 bg-royal-50 text-royal-700 px-4 py-2 rounded-full text-sm font-medium">
               <Star className="w-4 h-4 fill-current" />
-              <span>Trusted by 1,000+ healthcare professionals</span>
+              <span>Trusted by clinics in 15+ countries</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Affordable clinic management software for{' '}
-              <span className="text-royal-500">appointments, EMR & billing</span>
+              Complete clinic management software for{' '}
+              <span className="text-royal-500">clinics worldwide</span>
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed">
-              Appointik is lightweight clinic software for doctors and small clinics that need patient records, scheduling, prescriptions, billing, reminders and reports without expensive setup costs. Plans start at just ₹125/month.
+              Appointik is a complete clinic management solution with Clinic Web App, Android app, iPhone-friendly installable web app, dedicated Patient App, custom booking portals, multilingual notifications, EMR, billing, prescriptions and reports. Plans start at just ₹125/month.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Clinic Software Success Stories',
   description: 'Discover how 1,000+ healthcare professionals use Appointik clinic management software to manage appointments, patient records, reminders and billing.',
   alternates: {
-    canonical: '/success-stories',
+    canonical: '/success-stories/',
   },
 };
 

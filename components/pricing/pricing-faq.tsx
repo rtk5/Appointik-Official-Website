@@ -18,7 +18,19 @@ const faqs = [
   },
   {
     question: 'Is Appointik good for clinics looking for budget or cheap clinic software?',
-    answer: 'Yes. Appointik is designed as affordable clinic software for small clinics and independent doctors who need core clinic management features without costly setup, long contracts, or complex enterprise systems.'
+    answer: 'Yes. Appointik is designed as affordable clinic software for small clinics and independent doctors who need a complete clinic management solution without costly setup, long contracts, or complex enterprise systems.'
+  },
+  {
+    question: 'Can clinics outside India use Appointik?',
+    answer: 'Yes. Appointik is not limited to India. We already have customers in more than 15 countries, and clinics can use Appointik for appointments, patient records, billing, prescriptions, reminders and booking portals across different regions.'
+  },
+  {
+    question: 'Does Appointik support multiple notification languages?',
+    answer: 'Yes. Appointik supports notification messages in multiple regional and international languages, helping clinics communicate appointment reminders and patient updates in the language their patients understand.'
+  },
+  {
+    question: 'What is included in the Appointik clinic management package?',
+    answer: 'Appointik includes the Clinic Web App, Clinic Android App, an iPhone-friendly web app that can be installed from Safari, a dedicated Patient App, and custom appointment booking web portals for each clinic.'
   },
   {
     question: 'Can I switch between plans?',
@@ -34,7 +46,7 @@ const faqs = [
   },
   {
     question: 'Is my clinic data secure and compliant?',
-    answer: 'Security is our top priority. We use bank-grade encryption, HIPAA-compliant infrastructure, and Indian data centers. All data is encrypted at rest and in transit. We also maintain regular security audits and certifications.'
+    answer: 'Security is our top priority. We use bank-grade encryption, HIPAA-compliant infrastructure, and secure cloud hosting. All data is encrypted at rest and in transit. We also maintain regular security audits and certifications.'
   },
   {
     question: 'Can I use Appointik offline?',
@@ -46,7 +58,7 @@ const faqs = [
   },
   {
     question: 'How do SMS notifications work?',
-    answer: 'In the Basic and Own Device Plans, SMS notifications are sent directly from the user’s own device, so there are no per-SMS charges. Higher plans offer gateway-based SMS with delivery reports, automation, and bulk messaging features.'
+    answer: 'In the Basic and Own Device Plans, SMS notifications are sent directly from the user’s own device, so there are no per-SMS charges. Higher plans offer gateway-based SMS with delivery reports, automation, bulk messaging features, and support for multiple regional and international notification languages.'
   },
   {
     question: 'Do you provide training and support?',

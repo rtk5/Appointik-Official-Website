@@ -3,9 +3,9 @@ import { FeaturesSection } from '@/components/features/features-section';
 
 export const metadata: Metadata = {
   title: 'Clinic Management Software Features',
-  description: 'Explore Appointik clinic software features: patient management, appointment scheduling, EMR/EHR, billing, e-prescriptions, reminders, reports and web portal.',
+  description: 'Explore Appointik clinic software features: Clinic Web App, Android app, iPhone installable web app, Patient App, custom booking portals, EMR, billing and multilingual reminders.',
   alternates: {
-    canonical: '/features',
+    canonical: '/features/',
   },
 };
 
