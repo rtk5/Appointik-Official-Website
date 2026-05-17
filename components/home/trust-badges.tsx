@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Shield, Star, Globe, Users, Clock, Zap } from 'lucide-react';
+import { Download, Shield, Star, Globe, Users, Zap } from 'lucide-react';
 
 const badges = [
   {
@@ -10,9 +10,9 @@ const badges = [
     description: '1000+ reviews',
   },
   {
-    icon: Shield,
-    title: 'HIPAA Grade',
-    description: 'Bank-level security',
+    icon: Download,
+    title: '10,000+ Downloads',
+    description: 'Clinic app installs',
   },
   {
     icon: Users,
@@ -25,9 +25,9 @@ const badges = [
     description: 'Patient notifications',
   },
   {
-    icon: Clock,
-    title: '24/7 Support',
-    description: 'Always here to help',
+    icon: Shield,
+    title: 'HIPAA Grade',
+    description: 'Bank-level security',
   },
   {
     icon: Zap,

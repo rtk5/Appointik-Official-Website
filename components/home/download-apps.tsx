@@ -73,7 +73,7 @@ export function DownloadApps() {
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Manage appointments, patient records, prescriptions, billing and multilingual reminders from the Appointik clinic app.
+              Manage appointments, patient records, prescriptions, billing and multilingual reminders from the Appointik Clinic App with 10,000+ downloads.
             </p>
 
             <a
@@ -174,8 +174,8 @@ export function DownloadApps() {
             <div className="text-sm text-gray-600">Google Play Rating</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-teal-600 mb-1">1,000+</div>
-            <div className="text-sm text-gray-600">Active Users</div>
+            <div className="text-2xl font-bold text-teal-600 mb-1">10,000+</div>
+            <div className="text-sm text-gray-600">Clinic App Downloads</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-indigo-600 mb-1">15+</div>
