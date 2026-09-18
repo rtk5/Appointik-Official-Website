@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
@@ -172,10 +174,12 @@ export function TestimonialsCarousel() {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <img
+            <Image
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-full h-full object-cover transition-all group-hover:scale-110"
+              fill
+              sizes="(min-width: 1024px) 17vw, (min-width: 768px) 33vw, 50vw"
+              className="object-cover transition-all group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
               <div className="absolute bottom-2 left-2 right-2 text-white text-xs">
@@ -198,7 +202,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
           <Quote className="w-12 h-12 text-royal-100" />
           
           <blockquote className="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
-            "{testimonial.quote}"
+            &ldquo;{testimonial.quote}&rdquo;
           </blockquote>
           
           <div className="flex items-center space-x-1">
@@ -222,11 +226,13 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
 
         {/* Doctor Image */}
         <div className="relative">
-          <div className="relative overflow-hidden rounded-3xl">
-            <img
+          <div className="relative h-80 md:h-96 overflow-hidden rounded-3xl">
+            <Image
               src={testimonial.image}
               alt={testimonial.name}
-              className="w-full h-80 md:h-96 object-cover"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-royal-900/20 to-transparent"></div>
           </div>

@@ -1,43 +1,12 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 
 import { Check, Zap, Smartphone, MessageSquare } from 'lucide-react';
-
-/* --------------------------------------------------
-   Razorpay Payment Button (DOM-safe, WORKING)
--------------------------------------------------- */
-
-function RazorpayPaymentButton({ buttonId }: { buttonId: string }) {
-  const formRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
-    if (!formRef.current) return;
-
-    // Prevent duplicate injection
-    if (formRef.current.querySelector('script')) return;
-
-    const script = document.createElement('script');
-    script.src = 'https://checkout.razorpay.com/v1/payment-button.js';
-    script.async = true;
-    script.setAttribute('data-payment_button_id', buttonId);
-
-    formRef.current.appendChild(script);
-  }, [buttonId]);
-
-  return (
-  <div className="w-full mt-6 flex justify-center">
-    <form ref={formRef} />
-  </div>
-  );
-}
 
 /* --------------------------------------------------
    Plans
@@ -45,92 +14,72 @@ function RazorpayPaymentButton({ buttonId }: { buttonId: string }) {
 
 const plans = [
   {
-    id: 'basic-with-ads',
-    name: 'Basic Plan (With Ads)',
+    id: 'lite-plan',
+    name: 'Lite Plan',
     icon: Zap,
-    description: 'Best for clinics starting out. Full core features with ads.',
+    description: 'For clinics that prefer to manage everything from the mobile app.',
     price: {
-      monthly: 125,
-      annual: 115,
+      monthly: 249,
       currency: '₹',
-      unit: 'per month',
-      usdEquivalent: '$1.75 per month'
+      usdMonthly: 3.5
     },
     features: [
-      'Unlimited Appointments',
-      'Unlimited e-Prescriptions',
-      'Unlimited Documents (EMR / EHR)',
-      'Unlimited Billing & Payment Receipts',
-      'Unlimited Patients, Doctors & Consultants',
-      'Unlimited Calendar Event Notifications',
-      'Secure Custom Web Portal (Free Version)',
-      'Unlimited SMS & WhatsApp Notifications',
-      "Notifications are sent from USER'S DEVICE",
-      'Regional Languages Supported',
-      'Patient App included',
-      '1 Month FREE Trial Period'
+      'Android Clinic App',
+      'Android Patient App',
+      'Unlimited Patients and Appointments, Up to 2 Doctors',
+      'EMR/EHR',
+      'Referral & Lab request forms',
+      'Prescriptions & Invoices',
+      'Notifications - SMS, WhatsApp and Event',
+      '20 international and regional languages',
+      'Expense Tracker',
+      'Reports',
+      'Inventory Management',
+      'Follow-ups and Surveys',
+      'PIN Lock for Sensitive Sections',
+      '14 Days FREE Trial Period'
     ],
     popular: false,
-    razorpayButtonId: 'pl_SkUTgVT7n5sHHs',
     regionNote: 'Available worldwide'
   },
   {
-    id: 'own-device',
-    name: 'Own Device Plan',
+    id: 'pro-plan',
+    name: 'Pro Plan',
     icon: Smartphone,
-    description: 'Use your phone for SMS and WhatsApp – most popular choice',
+    description: 'For clinics that want mobile convenience with web app access.',
     price: {
-      monthly: 200,
-      annual: 184,
+      monthly: 349,
       currency: '₹',
-      unit: 'per month',
-      usdEquivalent: '$2.75 per month'
+      usdMonthly: 4.5
     },
     features: [
-      'Unlimited Appointments',
-      'Unlimited e-Prescriptions',
-      'Unlimited Documents (EMR / EHR)',
-      'Unlimited Billing & Payment Receipts',
-      'Unlimited Patients, Doctors & Consultants',
-      'Unlimited Calendar Event Notifications',
-      'Secure Custom Web Portal (Free Version)',
-      'Unlimited SMS & WhatsApp Notifications',
-      "Notifications are sent from USER'S DEVICE",
-      'Regional Languages Supported',
-      'Clinic Web and Patient Apps included',
-      '1 Month FREE Trial Period'
+      'Everything in Lite, plus',
+      'Web App (Desktop/Laptop)',
+      'iOS installable Web App',
+      'Dedicated Appointment Booking Portal',
+      'Aggregator Portal (Insurance Companies & Multi-Clinic Owners)',
+      'Letters'
     ],
-    popular: true,
-    razorpayButtonId: 'pl_Q1DhFG4bNjunj5'
+    popular: true
   },
   {
-    id: 'sms-plan',
-    name: 'SMS Plan',
+    id: 'max-plan',
+    name: 'Max Plan',
     icon: MessageSquare,
-    description: 'Includes SMS credits for high-volume practices',
+    description: 'For clinics that need multi-clinic support and staff roles.',
     price: {
-      monthly: 400,
-      annual: 368,
+      monthly: 449,
       currency: '₹',
-      unit: 'per month',
-      included: '500 SMS included'
+      usdMonthly: 5.5
     },
     features: [
-      'Unlimited Appointments',
-      'Unlimited e-Prescriptions',
-      'Unlimited Documents (EMR / EHR)',
-      'Unlimited Billing & Payment Receipts',
-      'Unlimited Patients, Doctors & Consultants',
-      'Unlimited Calendar Event & WhatsApp Notifications',
-      'Secure Custom Web Portal Included',
-      '500 SMS Notifications (English)',
-      'SMS Notifications are sent from the app',
-      'Regional Languages Supported (except SMS)',
-      'Clinic Web and Patient Apps included',
-      '1 Week Free Trial Period'
+      'Everything in Pro, plus',
+      'Multi-Clinic Support (1 Primary Included)',
+      'Extra Branch Add-On (₹250/mo per branch)',
+      'Multi-Role Staff Access (Receptionist, Doctor, Pharmacist, Lab)',
+      'Unlimited Staff Member Accounts — No Additional Charges'
     ],
-    popular: false,
-    razorpayButtonId: 'pl_Q1DrVwVzFzSBTE'
+    popular: false
   }
 ];
 
@@ -154,13 +103,19 @@ export function PricingSection() {
           Affordable clinic software pricing
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-          Choose budget-friendly clinic management software for appointments, EMR, billing, prescriptions and patient reminders. Start at just ₹125/month.
+          Choose one of the most affordable clinic software options with transparent pricing, no hidden costs, instant signup, instant renewal, and complete tools for appointments, EMR, billing, expense tracking, prescriptions, patient reminders, multi-clinic support and multi-role staff access. Plans start at ₹249/month. Annual billing saves 10% on rupee prices; dollar prices are not discounted.
         </p>
 
-        <div className="flex justify-center">
+        <p className="text-lg font-semibold text-royal-700 max-w-3xl mx-auto mb-8">
+          Pay per clinic, with no per-doctor or per-staff charges. Max includes
+          unlimited staff member accounts with Multi-Role Staff Access at no additional cost.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-3">
           <div className="flex items-center bg-white border border-gray-200 rounded-2xl p-1 shadow-sm">
             <button
               onClick={() => setIsAnnual(false)}
+              aria-pressed={!isAnnual}
               className={`px-6 py-2 rounded-xl text-sm font-semibold transition-all ${
                 !isAnnual
                   ? 'bg-royal-500 text-white shadow'
@@ -172,6 +127,7 @@ export function PricingSection() {
 
             <button
               onClick={() => setIsAnnual(true)}
+              aria-pressed={isAnnual}
               className={`px-6 py-2 rounded-xl text-sm font-semibold transition-all ${
                 isAnnual
                   ? 'bg-royal-500 text-white shadow'
@@ -183,7 +139,7 @@ export function PricingSection() {
           </div>
 
           <Badge className="ml-3 bg-teal-100 text-teal-700 self-center">
-            Save 8%
+            Save 10% annually (INR only)
           </Badge>
         </div>
 
@@ -193,7 +149,11 @@ export function PricingSection() {
       <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {plans.map((plan, index) => {
           const Icon = plan.icon;
-          const price = isAnnual ? plan.price.annual : plan.price.monthly;
+          const price = isAnnual
+            ? Math.round(plan.price.monthly * 12 * 0.9)
+            : plan.price.monthly;
+          const usdPrice = plan.price.usdMonthly * (isAnnual ? 12 : 1);
+          const unit = isAnnual ? 'per year' : 'per month';
 
           return (
             <motion.div
@@ -229,27 +189,22 @@ export function PricingSection() {
                 <div className="text-center mb-8">
                   <div className="text-4xl font-bold">
                     {plan.price.currency}
-                    {price}
+                    {price.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
                   </div>
-                  <div className="text-gray-600">{plan.price.unit}</div>
-                  {plan.price.usdEquivalent && (
-                    <div className="text-sm text-gray-500">
-                      {plan.price.usdEquivalent}
-                    </div>
-                  )}
+                  <div className="text-gray-600">{unit}</div>
+                  <div className="text-sm text-gray-500">
+                    ${usdPrice} {unit}
+                  </div>
                 </div>
 
                 <div className="space-y-3 mb-6">
                   {plan.features.map((feature, i) => (
-                    <div key={i} className="flex space-x-3">
-                      <Check className="w-5 h-5 text-teal-500" />
+                    <div key={i} className="flex items-start space-x-3">
+                      <Check className="w-5 h-5 shrink-0 text-teal-500" />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
-
-                {/* Razorpay Button */}
-                <RazorpayPaymentButton buttonId={plan.razorpayButtonId} />
               </Card>
             </motion.div>
           );

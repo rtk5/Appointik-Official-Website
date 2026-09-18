@@ -28,8 +28,6 @@ The product focuses on **simplicity, affordability, and offline reliability**.
 
 - **Appointik – Medical Practice Management**
   - https://play.google.com/store/apps/details?id=com.samrithtech.appointik
-- **Appointik G – General Appointment Scheduling**
-  - https://play.google.com/store/apps/details?id=com.samrithtech.appointikg
 - **Appointik Patient App**
   - https://play.google.com/store/apps/details?id=com.samrithtech.appointik.patient
 

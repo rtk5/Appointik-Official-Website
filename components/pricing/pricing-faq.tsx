@@ -11,64 +11,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MessageCircle } from 'lucide-react';
 
-const faqs = [
-  {
-    question: 'Is there a free trial available?',
-    answer: 'Yes! Our Basic Plan (With Ads) starts at ₹125/month. Higher plans also include free trial periods so you can explore all features before committing.'
-  },
-  {
-    question: 'Is Appointik good for clinics looking for budget or cheap clinic software?',
-    answer: 'Yes. Appointik is designed as affordable clinic software for small clinics and independent doctors who need a complete clinic management solution without costly setup, long contracts, or complex enterprise systems.'
-  },
-  {
-    question: 'Can clinics outside India use Appointik?',
-    answer: 'Yes. Appointik is not limited to India. We already have customers in more than 15 countries, and clinics can use Appointik for appointments, patient records, billing, prescriptions, reminders and booking portals across different regions.'
-  },
-  {
-    question: 'Does Appointik support multiple notification languages?',
-    answer: 'Yes. Appointik supports notification messages in multiple regional and international languages, helping clinics communicate appointment reminders and patient updates in the language their patients understand.'
-  },
-  {
-    question: 'What is included in the Appointik clinic management package?',
-    answer: 'Appointik includes the Clinic Web App, Clinic Android App, an iPhone-friendly web app that can be installed from Safari, a dedicated Patient App, and custom appointment booking web portals for each clinic.'
-  },
-  {
-    question: 'Can I switch between plans?',
-    answer: 'Absolutely! You can upgrade or downgrade your plan at any time. If you switch from a higher to lower plan, the change will take effect at your next billing cycle. Upgrades are effective immediately with pro-rated billing.'
-  },
-  {
-    question: 'What happens to my data if I cancel?',
-    answer: 'Your data is always yours. If you cancel, you can export all your patient data, appointments, and records in standard formats. We provide 30 days after cancellation to download your data before permanent deletion.'
-  },
-  {
-    question: 'Do you offer discounts for multiple clinics?',
-    answer: 'Yes! We offer volume discounts for multiple clinic locations. Contact our sales team for custom pricing if you have 3+ clinics. Enterprise plans include centralized management and reporting across all locations.'
-  },
-  {
-    question: 'Is my clinic data secure and compliant?',
-    answer: 'Security is our top priority. We use bank-grade encryption, HIPAA-compliant infrastructure, and secure cloud hosting. All data is encrypted at rest and in transit. We also maintain regular security audits and certifications.'
-  },
-  {
-    question: 'Can I use Appointik offline?',
-    answer: 'Yes! Appointik works completely offline. You can manage appointments, add patient records, create prescriptions, and generate bills without internet. Everything syncs automatically when you\'re back online.'
-  },
-  {
-    question: 'What payment methods do you accept?',
-    answer: 'We accept all major payment methods including UPI, debit/credit cards, net banking, and digital wallets. International customers can pay via PayPal/Razorpay with credit cards. All payments are processed securely.'
-  },
-  {
-    question: 'How do SMS notifications work?',
-    answer: 'In the Basic and Own Device Plans, SMS notifications are sent directly from the user’s own device, so there are no per-SMS charges. Higher plans offer gateway-based SMS with delivery reports, automation, bulk messaging features, and support for multiple regional and international notification languages.'
-  },
-  {
-    question: 'Do you provide training and support?',
-    answer: 'Yes! We provide support via email and WhatsApp. We also offer a generous free trial period so you can try the app, experiment with workflows, and make sure it fits your clinic before committing.'
-  },
-  {
-    question: 'Can patients book appointments online?',
-    answer: 'Yes! Each clinic gets a branded online booking portal where patients can see real-time availability and book appointments 24/7. The portal is mobile-optimized and can be embedded on your website or shared via link.'
-  }
-];
+import { pricingFaqs } from '@/lib/pricing-faqs';
 
 export function PricingFAQ() {
   return (
@@ -97,7 +40,7 @@ export function PricingFAQ() {
       >
         <Card className="p-8 rounded-3xl shadow-lg bg-white border-0">
           <Accordion type="single" collapsible className="w-full space-y-4">
-            {faqs.map((faq, index) => (
+            {pricingFaqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}

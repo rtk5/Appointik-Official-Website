@@ -11,8 +11,10 @@ import {
   CreditCard, 
   ChevronRight,
   Clock,
-  Phone,
-  CheckCircle
+  CheckCircle,
+  FilePlus2,
+  LockKeyhole,
+  ReceiptText
 } from 'lucide-react';
 
 const walkthrough = [
@@ -53,8 +55,8 @@ const walkthrough = [
     id: 'prescription',
     icon: FileText,
     title: 'Digital Prescriptions',
-    description: 'Generate professional prescriptions with custom prescription templates',
-    features: ['Drug database', 'Print prescriptions', 'Digital signatures'],
+    description: 'Upload your digital letterhead and generate prescriptions with your clinic branding',
+    features: ['Drug database', 'Your own letterhead', 'Print prescriptions'],
     mockData: {
       title: 'e-Prescription',
       prescription: {
@@ -66,6 +68,21 @@ const walkthrough = [
           { name: 'Azithromycin 250mg', dosage: '1-0-0', duration: '3 days' }
         ]
       }
+    }
+  },
+  {
+    id: 'letters',
+    icon: FilePlus2,
+    title: 'Letters & Documents',
+    description: 'Create clinic letters, certificates, consent forms and lab requests',
+    features: ['Referral letters', 'Medical certificates', 'Custom letters'],
+    mockData: {
+      title: 'Letters',
+      documents: [
+        { name: 'Referral Letter', detail: 'Specialist referral with patient summary' },
+        { name: 'Lab Request', detail: 'Diagnostic test request with notes' },
+        { name: 'Medical Certificate', detail: 'Clinic-branded certificate for patients' },
+      ]
     }
   },
   {
@@ -87,6 +104,40 @@ const walkthrough = [
         status: 'Paid'
       }
     }
+  },
+  {
+    id: 'expenses',
+    icon: ReceiptText,
+    title: 'Expense Tracker',
+    description: 'Record clinic expenses and review spending reports',
+    features: ['Daily expense entry', 'Expense categories', 'Expense reports'],
+    mockData: {
+      title: 'Expense Report',
+      report: {
+        period: 'June 2026',
+        total: '₹42,800',
+        items: [
+          { category: 'Clinic supplies', amount: '₹12,500' },
+          { category: 'Rent & utilities', amount: '₹21,000' },
+          { category: 'Staff expenses', amount: '₹9,300' }
+        ],
+      }
+    }
+  },
+  {
+    id: 'security',
+    icon: LockKeyhole,
+    title: 'Sensitive Data Security',
+    description: 'Lock selected sections with a PIN for extra privacy',
+    features: ['PIN lockdown', 'Restricted sections', 'Sensitive information protection'],
+    mockData: {
+      title: 'Protected Sections',
+      sections: [
+        { name: 'Financial reports', status: 'PIN required' },
+        { name: 'Patient documents', status: 'PIN required' },
+        { name: 'Clinic settings', status: 'PIN required' },
+      ]
+    }
   }
 ];
 
@@ -106,7 +157,7 @@ export function ProductWalkthrough() {
           See Appointik in action
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          From appointment booking to customer satisfaction surveys - everything flows seamlessly in one integrated platform
+          From appointment booking to billing, expense tracking and customer satisfaction surveys - everything flows seamlessly in one integrated platform
         </p>
       </motion.div>
 
@@ -187,7 +238,16 @@ export function ProductWalkthrough() {
                   <PrescriptionInterface data={walkthrough[2].mockData} />
                 )}
                 {activeStep === 3 && (
-                  <BillingInterface data={walkthrough[3].mockData} />
+                  <LettersInterface data={walkthrough[3].mockData} />
+                )}
+                {activeStep === 4 && (
+                  <BillingInterface data={walkthrough[4].mockData} />
+                )}
+                {activeStep === 5 && (
+                  <ExpenseInterface data={walkthrough[5].mockData} />
+                )}
+                {activeStep === 6 && (
+                  <SecurityInterface data={walkthrough[6].mockData} />
                 )}
               </Card>
             </motion.div>
@@ -308,6 +368,35 @@ function PrescriptionInterface({ data }: { data: any }) {
   );
 }
 
+function LettersInterface({ data }: { data: any }) {
+  return (
+    <div className="space-y-6">
+      <div className="border-b pb-4">
+        <h3 className="text-xl font-semibold text-gray-900">{data.title}</h3>
+        <p className="mt-2 text-sm text-gray-600">
+          Generate referral letters, lab requests, medical certificates, fitness clearance notes, consent forms and custom letters.
+        </p>
+      </div>
+      <div className="space-y-3">
+        {data.documents.map((document: any, index: number) => (
+          <div key={index} className="flex items-start space-x-3 p-4 border border-gray-200 rounded-xl">
+            <div className="w-10 h-10 bg-royal-100 rounded-lg flex items-center justify-center flex-shrink-0">
+              <FilePlus2 className="w-5 h-5 text-royal-600" />
+            </div>
+            <div>
+              <div className="font-medium text-gray-900">{document.name}</div>
+              <div className="text-sm text-gray-600">{document.detail}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <Button className="w-full bg-royal-500 hover:bg-royal-600 text-white rounded-xl">
+        Generate Letter
+      </Button>
+    </div>
+  );
+}
+
 function BillingInterface({ data }: { data: any }) {
   return (
     <div className="space-y-6">
@@ -336,6 +425,68 @@ function BillingInterface({ data }: { data: any }) {
       </div>
       <Button className="w-full bg-teal-500 hover:bg-teal-600 text-white rounded-xl">
         Send Invoice
+      </Button>
+    </div>
+  );
+}
+
+function ExpenseInterface({ data }: { data: any }) {
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between border-b pb-4">
+        <div>
+          <h3 className="text-xl font-semibold text-gray-900">{data.title}</h3>
+          <p className="mt-1 text-sm text-gray-600">{data.report.period}</p>
+        </div>
+        <div className="px-3 py-1 bg-royal-100 text-royal-700 rounded-full text-sm font-medium">
+          Web + Android
+        </div>
+      </div>
+      <div className="p-4 bg-royal-50 rounded-xl">
+        <div className="text-sm text-gray-600 mb-1">Total Expenses</div>
+        <div className="text-2xl font-bold text-royal-700">{data.report.total}</div>
+      </div>
+      <div className="space-y-3">
+        {data.report.items.map((item: any, index: number) => (
+          <div key={index} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+            <span className="text-gray-900">{item.category}</span>
+            <span className="font-medium">{item.amount}</span>
+          </div>
+        ))}
+      </div>
+      <Button className="w-full bg-royal-500 hover:bg-royal-600 text-white rounded-xl">
+        View Expense Reports
+      </Button>
+    </div>
+  );
+}
+
+function SecurityInterface({ data }: { data: any }) {
+  return (
+    <div className="space-y-6">
+      <div className="border-b pb-4">
+        <h3 className="text-xl font-semibold text-gray-900">{data.title}</h3>
+        <p className="mt-2 text-sm text-gray-600">
+          Add an extra PIN lock to sensitive information and selected clinic sections.
+        </p>
+      </div>
+      <div className="space-y-3">
+        {data.sections.map((section: any, index: number) => (
+          <div key={index} className="flex items-center justify-between p-4 bg-amber-50 rounded-xl">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                <LockKeyhole className="w-5 h-5 text-amber-600" />
+              </div>
+              <span className="font-medium text-gray-900">{section.name}</span>
+            </div>
+            <span className="px-3 py-1 bg-white text-amber-700 rounded-full text-xs font-medium">
+              {section.status}
+            </span>
+          </div>
+        ))}
+      </div>
+      <Button className="w-full bg-amber-500 hover:bg-amber-600 text-white rounded-xl">
+        Manage PIN Lock
       </Button>
     </div>
   );

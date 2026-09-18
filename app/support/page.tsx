@@ -1,13 +1,11 @@
-import { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { SupportSection } from '@/components/support/support-section';
 
-export const metadata: Metadata = {
-  title: 'Support - Get Help with Appointik',
-  description: 'Get support for Appointik clinic management software. Contact us via email, WhatsApp, or use our contact form.',
-  alternates: {
-    canonical: '/support/',
-  },
-};
+export const metadata = pageMetadata(
+  'Support - Get Help with Appointik',
+  'Get help with Appointik clinic software, plans and apps. Contact our team by email or WhatsApp, or use the support form to start your enquiry.',
+  '/support/'
+);
 
 export default function SupportPage() {
   return (

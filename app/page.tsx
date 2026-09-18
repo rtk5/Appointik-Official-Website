@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { HeroSection } from '@/components/home/hero-section';
 import { BenefitCards } from '@/components/home/benefit-cards';
 import { ProductWalkthrough } from '@/components/home/product-walkthrough';
@@ -7,14 +7,11 @@ import { DownloadApps } from '@/components/home/download-apps';
 import { MissionVision } from '@/components/home/mission-vision';
 import { TrustBadges } from '@/components/home/trust-badges';
 
-export const metadata: Metadata = {
-  title: 'Complete Clinic Management Software from ₹125/month',
-  description:
-    'Appointik is budget-friendly clinic management software trusted in 15+ countries, with EMR, billing, e-prescriptions, multilingual reminders, patient apps and booking portals.',
-  alternates: {
-    canonical: '/',
-  },
-};
+export const metadata = pageMetadata(
+  'Clinic Management Software from ₹249/month',
+  'Appointik clinic software from ₹249 per clinic/month. Android apps in 20 languages, EMR, billing and booking portals. No per-doctor or per-staff fees.',
+  '/'
+);
 
 const softwareJsonLd = {
   '@context': 'https://schema.org',
@@ -23,13 +20,15 @@ const softwareJsonLd = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Android, Web, iOS',
   description:
-    'Affordable clinic management software for appointments, EMR, billing, e-prescriptions, patient records, multilingual reminders, reports, patient apps and custom booking portals.',
+    'Clinic management software with Android Clinic and Patient Apps in 20 languages, appointments, EMR and billing. Pro includes booking and Aggregator Portals. Max includes unlimited staff accounts. Pricing is per clinic.',
   url: 'https://appointik.in',
   offers: {
     '@type': 'Offer',
-    price: '125',
+    price: '249',
     priceCurrency: 'INR',
     category: 'Subscription',
+    name: 'Lite Plan — monthly subscription per clinic',
+    url: 'https://appointik.in/pricing/',
   },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -54,7 +53,7 @@ export default function Home() {
             Complete clinic management software for growing clinics worldwide
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            If you are comparing clinic management software, budget clinic software, or an affordable alternative to costly hospital systems, Appointik gives you a complete package: Clinic Web App, Android app, iPhone-friendly installable web app, dedicated Patient App, custom appointment booking portals, EMR/EHR documents, digital prescriptions, multilingual patient communication, billing, payment receipts and reports.
+            If you are comparing clinic management software, budget clinic software, or an affordable alternative to costly hospital systems, Appointik gives you a complete package: Clinic Web App, Android Clinic App, Android Patient App, iOS installable Web App, multi-clinic branch support, multi-role staff access, custom appointment booking portals, EMR/EHR documents, digital prescriptions in the patient&apos;s preferred language, clinic letters and certificates, reminders in 20 languages, PIN-protected sensitive information, billing, payment receipts, expense tracking and reports.
           </p>
         </div>
       </section>

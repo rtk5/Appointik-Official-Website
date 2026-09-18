@@ -1,0 +1,86 @@
+--- a/firebase.json
++++ b/firebase.json
+@@ -4,8 +4,81 @@
+     "ignore": [
+       "firebase.json",
+       "**/.*",
+-      "**/node_modules/**"
+-    ]
++      "**/node_modules/**",
++      "arogyavardhini/**",
++      "shatayuphysio/**",
++      "jayamclinic/**",
++      "kdham-DrSanthosh/**",
++      "drkphysioplusclinic/**"
++    ],
++    "redirects": [
++      {
++        "source": "/features",
++        "destination": "/features/",
++        "type": 301
++      },
++      {
++        "source": "/pricing",
++        "destination": "/pricing/",
++        "type": 301
++      },
++      {
++        "source": "/success-stories",
++        "destination": "/success-stories/",
++        "type": 301
++      },
++      {
++        "source": "/support",
++        "destination": "/support/",
++        "type": 301
++      },
++      {
++        "source": "/demo",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demo/",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demotimeslot",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demotimeslot/",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demo/index.html",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demotimeslot/index.html",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demofree",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demofree/",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      },
++      {
++        "source": "/demofree/index.html",
++        "destination": "https://book.appointik.in/c/appointik-team-clinic",
++        "type": 301
++      }
++    ],
++    "trailingSlash": true
+   },
+   "functions": {
+     "predeploy": [],

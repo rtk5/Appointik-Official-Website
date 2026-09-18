@@ -25,7 +25,7 @@ export function ComingSoonSection() {
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">
-            We're working hard to bring you this feature. Stay tuned for updates!
+            We&apos;re working hard to bring you this feature. Stay tuned for updates!
           </p>
 
           <div className="space-y-6">

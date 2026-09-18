@@ -128,7 +128,7 @@ export function SuccessStoriesSection() {
               </div>
 
               <blockquote className="text-gray-700 mb-6 leading-relaxed">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
 
               <div className="grid grid-cols-3 gap-4">

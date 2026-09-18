@@ -21,8 +21,8 @@ const badges = [
   },
   {
     icon: Globe,
-    title: 'Multilingual',
-    description: 'Patient notifications',
+    title: '20 Languages',
+    description: 'Android apps & documents',
   },
   {
     icon: Shield,

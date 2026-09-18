@@ -11,9 +11,9 @@ import { cn } from '@/lib/utils';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Features', href: '/features' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Success Stories', href: '/success-stories' },
+  { name: 'Features', href: '/features/' },
+  { name: 'Pricing', href: '/pricing/' },
+  { name: 'Success Stories', href: '/success-stories/' },
 ];
 
 const doctorLoginUrl = 'https://clinic.appointik.in/login';
@@ -23,6 +23,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const activePath = pathname.endsWith('/') ? pathname : `${pathname}/`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +67,7 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   'text-gray-700 hover:text-royal-600 transition-colors focus-outline',
-                  pathname === item.href && 'text-royal-600 font-medium'
+                  activePath === item.href && 'text-royal-600 font-medium'
                 )}
               >
                 {item.name}
@@ -79,7 +80,7 @@ export function Header() {
             <Button
               asChild
               variant="outline"
-              className="border-royal-500 text-royal-700 hover:bg-royal-50 rounded-2xl px-5 py-2 font-medium focus-outline"
+              className="border-royal-500 text-royal-700 bg-white hover:bg-white focus:bg-white active:bg-white rounded-2xl px-5 py-2 font-medium focus-outline"
             >
               <a
                 href={doctorLoginUrl}
@@ -92,7 +93,7 @@ export function Header() {
             <Button
               asChild
               variant="outline"
-              className="border-teal-500 text-teal-700 hover:bg-teal-50 rounded-2xl px-5 py-2 font-medium focus-outline"
+              className="border-teal-500 text-teal-700 bg-white hover:bg-white focus:bg-white active:bg-white rounded-2xl px-5 py-2 font-medium focus-outline"
             >
               <a
                 href={patientAppUrl}
@@ -120,7 +121,7 @@ export function Header() {
                     href={item.href}
                     className={cn(
                       'block text-lg text-gray-700 hover:text-royal-600 transition-colors',
-                      pathname === item.href && 'text-royal-600 font-medium'
+                      activePath === item.href && 'text-royal-600 font-medium'
                     )}
                     onClick={() => setIsOpen(false)}
                   >
@@ -132,7 +133,7 @@ export function Header() {
                     <Button
                       asChild
                       variant="outline"
-                      className="w-full border-royal-500 text-royal-700 hover:bg-royal-50 rounded-2xl"
+                      className="w-full border-royal-500 text-royal-700 bg-white hover:bg-white focus:bg-white active:bg-white rounded-2xl"
                     >
                       <a
                         href={doctorLoginUrl}
@@ -146,7 +147,7 @@ export function Header() {
                     <Button
                       asChild
                       variant="outline"
-                      className="w-full border-teal-500 text-teal-700 hover:bg-teal-50 rounded-2xl"
+                      className="w-full border-teal-500 text-teal-700 bg-white hover:bg-white focus:bg-white active:bg-white rounded-2xl"
                     >
                       <a
                         href={patientAppUrl}

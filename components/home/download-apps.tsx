@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Calendar, MonitorSmartphone, Smartphone, User } from 'lucide-react';
@@ -18,7 +20,7 @@ export function DownloadApps() {
           Complete Clinic Software Package
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Clinic Web App, Android app, iPhone-friendly installable web app, Patient App and custom booking portals for every clinic
+          Clinic Web App, Android Clinic App, Android Patient App, iOS installable Web App, custom booking portals, clinic letters, expense tracker, expense reports, 20-language prescriptions, invoices and reminders, and PIN-lock security for every clinic
         </p>
       </motion.div>
 
@@ -41,7 +43,7 @@ export function DownloadApps() {
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Run appointments, EMR, billing, prescriptions, patient records and reports from the browser. Install the web app on iPhone for quick iOS access.
+              Run appointments, EMR, billing, expense tracking, expense reports, prescriptions, clinic letters, patient records, PIN-protected sections and reports from the browser. Install the web app on iPhone for quick iOS access.
             </p>
 
             <a
@@ -55,7 +57,7 @@ export function DownloadApps() {
           </Card>
         </motion.div>
 
-        {/* Appointik – Clinic Android App */}
+        {/* Appointik - Android Clinic App */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,11 +71,11 @@ export function DownloadApps() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Clinic Android App
+              Android Clinic App
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Manage appointments, patient records, prescriptions, billing and multilingual reminders from the Appointik Clinic App with 10,000+ downloads.
+              View the Android Clinic App in any of 20 languages. Manage appointments, patient records, prescriptions, billing, clinic letters, expenses, reports and reminders in the Appointik Clinic App with 10,000+ downloads.
             </p>
 
             <a
@@ -82,10 +84,12 @@ export function DownloadApps() {
               rel="noopener noreferrer"
               className="inline-block transition-transform hover:scale-105"
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Get it on Google Play"
-                className="h-14 mx-auto"
+              <Image
+                src="/google-play-badge.svg"
+                alt="Get the Appointik Clinic App on Google Play"
+                width={189}
+                height={56}
+                className="h-14 w-auto mx-auto"
               />
             </a>
           </Card>
@@ -109,7 +113,7 @@ export function DownloadApps() {
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Give patients a simple app to book appointments, view prescriptions, access reports and stay connected with their clinic.
+              Give patients an Android app they can view in any of 20 languages to book appointments, view prescriptions, access reports and stay connected with their clinic.
             </p>
 
             <a
@@ -118,10 +122,12 @@ export function DownloadApps() {
               rel="noopener noreferrer"
               className="inline-block transition-transform hover:scale-105"
             >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                alt="Get it on Google Play"
-                className="h-14 mx-auto"
+              <Image
+                src="/google-play-badge.svg"
+                alt="Get the Appointik Patient App on Google Play"
+                width={189}
+                height={56}
+                className="h-14 w-auto mx-auto"
               />
             </a>
           </Card>
@@ -145,11 +151,11 @@ export function DownloadApps() {
             </h3>
 
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Each clinic can share a branded appointment booking web portal where patients book available slots online.
+              Share a branded booking portal where patients book appointments online. Configure services, pricing and time slots in the Clinic Web App, and assign services and time slots to specific doctors.
             </p>
 
             <a
-              href="https://appointik.in/demo/"
+              href="https://book.appointik.in/c/appointik-team-clinic"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center h-12 px-5 rounded-2xl bg-royal-500 text-white font-semibold hover:bg-royal-600 transition-colors"

@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -43,9 +45,11 @@ export function WhatsAppWidget() {
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
-                    <img
+                    <Image
                       src="/icons/whatsapp.png"
                       alt="WhatsApp"
+                      width={20}
+                      height={20}
                       className="w-5 h-5"
                     />
                   </div>
@@ -133,9 +137,11 @@ export function WhatsAppWidget() {
           {isOpen ? (
             <X className="w-6 h-6" />
           ) : (
-            <img
+            <Image
               src="/icons/whatsapp.png"
               alt="WhatsApp"
+              width={32}
+              height={32}
               className="w-8 h-8 object-contain"
             />
           )}

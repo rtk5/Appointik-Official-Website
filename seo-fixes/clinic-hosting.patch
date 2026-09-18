@@ -1,0 +1,48 @@
+--- a/firebase.json
++++ b/firebase.json
+@@ -55,7 +55,43 @@
+             "value": "no-cache, no-store, must-revalidate"
+           }
+         ]
++      },
++      {
++        "source": "/",
++        "headers": [
++          {
++            "key": "Link",
++            "value": "<https://clinic.appointik.in/login>; rel=\"canonical\""
++          }
++        ]
++      },
++      {
++        "source": "/login",
++        "headers": [
++          {
++            "key": "Link",
++            "value": "<https://clinic.appointik.in/login>; rel=\"canonical\""
++          }
++        ]
++      },
++      {
++        "source": "/login/",
++        "headers": [
++          {
++            "key": "Link",
++            "value": "<https://clinic.appointik.in/login>; rel=\"canonical\""
++          }
++        ]
++      },
++      {
++        "source": "/index.html",
++        "headers": [
++          {
++            "key": "Link",
++            "value": "<https://clinic.appointik.in/login>; rel=\"canonical\""
++          }
++        ]
+       }
+     ]
+   }
+-}
+\ No newline at end of file
++}

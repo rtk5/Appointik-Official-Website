@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { socialImage } from '@/lib/seo';
 import { Inter } from 'next/font/google';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
@@ -39,7 +40,7 @@ const websiteJsonLd = {
   name: 'Appointik',
   url: 'https://appointik.in',
   description:
-    'Affordable clinic management software for appointments, EMR, billing, prescriptions, patient records, multilingual notifications, patient apps and custom booking portals.',
+    'Affordable clinic management software with multi-clinic support, multi-role staff access, transparent pricing, appointments, EMR, billing, expense reports, clinic letters, prescriptions, invoices, reminders, patient apps and booking portals.',
   publisher: {
     '@type': 'Organization',
     name: 'Appointik',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     template: '%s | Appointik Clinic Software',
     default: 'Appointik - Affordable Clinic Management Software',
   },
-  description: 'Affordable clinic management software trusted by clinics in 15+ countries. Manage appointments, EMR, billing, prescriptions, patient records, multilingual notifications, patient apps and custom booking portals from ₹125/month.',
+  description: 'Affordable clinic management software trusted by clinics in 15+ countries. Manage appointments, EMR, billing, multi-clinic branches, multi-role staff access, expenses, prescriptions, invoices, reminders, patient apps and booking portals from ₹249/month.',
   
   // ✅ FAVICON ADDED HERE
   icons: {
@@ -69,16 +70,34 @@ export const metadata: Metadata = {
     'cheap clinic software',
     'appointment scheduling',
     'EMR software',
+    'clinic letters software',
+    'medical certificate software',
+    'referral letter software',
     'healthcare software',
     'clinic software India',
     'clinic management software worldwide',
-    'multilingual clinic notifications',
+    'multi clinic software',
+    'multi-clinic clinic management software',
+    'multi role clinic software',
+    'role based staff access clinic software',
+    'clinic branch management software',
+    'multilingual clinic software',
+    'clinic prescriptions invoices and reminders in 20 languages',
+    'secure clinic software',
+    'PIN protected patient records',
     'patient booking portal',
     'clinic web app',
-    'clinic Android app',
+    'Android Clinic App',
     'clinic software for iPhone',
     'patient management',
     'medical billing software',
+    'clinic expense tracker',
+    'clinic expense reports',
+    'transparent pricing clinic software',
+    'no hidden costs clinic software',
+    'instant renewal clinic software',
+    'instant signup clinic software',
+    'most affordable clinic software',
   ],
   authors: [{ name: 'Appointik' }],
   creator: 'Appointik',
@@ -88,23 +107,16 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://appointik.in',
     title: 'Appointik - Affordable Clinic Management Software',
-    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions, multilingual notifications, patient apps and custom booking portals. Trusted in 15+ countries.',
+    description: 'Budget-friendly clinic software for appointments, EMR, billing, multi-clinic branch support, multi-role staff access, expense reports, clinic letters, prescriptions, invoices, reminders, patient apps and booking portals. Trusted in 15+ countries.',
     siteName: 'Appointik',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Appointik - Clinic Management Software',
-      },
-    ],
+    images: [socialImage],
   },
 
   twitter: {
     card: 'summary_large_image',
     title: 'Appointik - Affordable Clinic Management Software',
-    description: 'Budget-friendly clinic software for appointments, EMR, billing, prescriptions, multilingual notifications, patient apps and custom booking portals.',
-    images: ['/og-image.png'],
+    description: 'Budget-friendly clinic software for appointments, EMR, billing, multi-clinic branch support, multi-role staff access, expense reports, clinic letters, prescriptions, invoices, reminders, patient apps and booking portals.',
+    images: [socialImage],
   },
 
   robots: {

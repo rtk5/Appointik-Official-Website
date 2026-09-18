@@ -73,7 +73,7 @@ export default function PaymentSuccessPage() {
                   size="lg"
                   className="rounded-2xl px-8 py-3 border-2 border-gray-200 hover:border-royal-500 font-semibold"
                 >
-                  <Link href="/support" className="flex items-center space-x-2">
+                  <Link href="/support/" className="flex items-center space-x-2">
                     <span>Get Support</span>
                     <ArrowRight className="w-5 h-5" />
                   </Link>

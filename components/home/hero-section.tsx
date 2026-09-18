@@ -31,7 +31,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed">
-              Appointik is a complete clinic management solution with Clinic Web App, Android app, iPhone-friendly installable web app, dedicated Patient App, custom booking portals, multilingual notifications, EMR, billing, prescriptions and reports. Plans start at just ₹125/month.
+              Appointik is a complete clinic management solution with Clinic Web App, Android Clinic App, Android Patient App, iOS installable Web App, custom booking portals, prescriptions, invoices and reminders in 20 languages, EMR, billing, expense tracking, expense reports, clinic letters, PIN-protected sensitive sections and reports. Plans start at just ₹249/month.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -86,7 +86,7 @@ export function HeroSection() {
               <div className="bg-gradient-to-br from-royal-500 to-teal-500 rounded-2xl p-6 text-white">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-lg font-semibold">
-                    Today's Appointments
+                    Today&apos;s Appointments
                   </h3>
                   <div className="bg-white/20 rounded-lg px-3 py-1 text-sm">
                     12 patients

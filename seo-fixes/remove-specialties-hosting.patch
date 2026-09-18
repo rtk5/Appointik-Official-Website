@@ -1,0 +1,12 @@
+--- a/firebase.json
++++ b/firebase.json
+@@ -9,7 +9,8 @@
+       "shatayuphysio/**",
+       "jayamclinic/**",
+       "kdham-DrSanthosh/**",
+-      "drkphysioplusclinic/**"
++      "drkphysioplusclinic/**",
++      "specialties/**"
+     ],
+     "redirects": [
+       {

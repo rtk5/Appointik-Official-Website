@@ -1,15 +1,12 @@
-import { Metadata } from 'next';
+import { pageMetadata } from '@/lib/seo';
 import { SuccessStoriesSection } from '@/components/success-stories/success-stories-section';
-import { CaseStudiesGrid } from '@/components/success-stories/case-studies-grid';
 import { MetricsOverview } from '@/components/success-stories/metrics-overview';
 
-export const metadata: Metadata = {
-  title: 'Clinic Software Success Stories',
-  description: 'Discover how 1,000+ healthcare professionals use Appointik clinic management software to manage appointments, patient records, reminders and billing.',
-  alternates: {
-    canonical: '/success-stories/',
-  },
-};
+export const metadata = pageMetadata(
+  'Clinic Software Success Stories',
+  'Read how healthcare professionals use Appointik for appointments, patient records, reminders and billing, with clinic software used in 15+ countries.',
+  '/success-stories/'
+);
 
 export default function SuccessStoriesPage() {
   return (

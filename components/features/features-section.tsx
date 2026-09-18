@@ -5,16 +5,20 @@ import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { 
+  Building2,
   Users, 
   Calendar, 
   UserCheck, 
-  FileText, 
   CreditCard, 
   Pill, 
-  Video, 
+  FilePlus2,
+  LockKeyhole,
+  Languages,
   Package, 
   Globe, 
   BarChart3,
+  ReceiptText,
+  ShieldCheck,
   CheckCircle
 } from 'lucide-react';
 
@@ -41,9 +45,40 @@ const features = [
       'Schedule multiple appointments at a time',
       'Auto increment next available appointment time',
       'Automated SMS and WhatsApp appointment reminders',
-      'Notification messages in multiple regional and international languages',
+      'Appointment reminders in 20 regional and international languages',
       'Patient follow-up scheduling with reminders',
       'Filter appointments by doctor for quick access',
+    ]
+  },
+  {
+    id: 'letters-documents',
+    title: 'Letters & Documents',
+    icon: FilePlus2,
+    description: 'Generate clinic letters, certificates and forms',
+    videoUrl: '/videos/letters-documents.mp4',
+    isNew: true,
+    features: [
+      'Generate referral letters for specialist and hospital referrals',
+      'Create lab request letters with patient and clinical details',
+      'Issue medical certificates and fitness clearance letters',
+      'Prepare consent forms and custom clinic letters',
+      'Keep clinic documents consistent with reusable templates',
+    ]
+  },
+  {
+    id: 'multilingual-notifications',
+    title: '20-Language Support',
+    icon: Languages,
+    description: 'Android app interfaces, prescriptions, invoices and reminders in 20 languages',
+    videoUrl: '/videos/multilingual-notifications.mp4',
+    isNew: true,
+    features: [
+      'View the Android Clinic App interface in any of 20 languages',
+      'View the Android Patient App interface in any of 20 languages',
+      "Generate prescriptions and invoices in the patient's preferred language",
+      'Send appointment reminders in 20 regional and international languages',
+      'Improve patient communication with language-friendly documents and messages',
+      'Support reminders and updates through SMS and WhatsApp workflows',
     ]
   },
   {
@@ -56,6 +91,36 @@ const features = [
       'Secure multi-device access for doctors and clinic staff',
       'Multiple doctor profiles with individual schedules',
       'Consultation notes sharing between doctors',
+    ]
+  },
+  {
+    id: 'multi-clinic-support',
+    title: 'Multi-Clinic Support',
+    icon: Building2,
+    description: 'Manage multiple clinic branches from one account',
+    videoUrl: '/videos/multi-clinic-support.mp4',
+    isNew: true,
+    features: [
+      'Run a primary clinic and add extra branches as your practice grows',
+      'Organize appointments, patients and clinic operations across locations',
+      'Keep branch workflows connected without switching between separate systems',
+      'Useful for growing clinics, polyclinics and multi-location practices',
+    ]
+  },
+  {
+    id: 'multi-role-staff-access',
+    title: 'Multi-Role Staff Access',
+    icon: ShieldCheck,
+    description: 'Unlimited staff member accounts with role-based access, included in Max',
+    videoUrl: '/videos/multi-role-staff-access.mp4',
+    isNew: true,
+    features: [
+      'Give role-based access to receptionists, doctors, pharmacists and lab staff',
+      'Create unlimited staff member accounts at no additional charge',
+      'Pay per clinic, with no per-doctor or per-staff fees',
+      'Let each staff member work with the clinic tools relevant to their role',
+      'Improve team coordination while keeping sensitive sections protected',
+      'Designed for clinics that need structured staff workflows',
     ]
   },
   // {
@@ -83,7 +148,36 @@ const features = [
     features: [
       'Dispensary billing with medicine inventory integration',
       'Clinic billing for consultations and procedures',
+      'Upload a digital copy of your letterhead and generate invoices on it',
       'Lab billing for diagnostic tests and reports',
+    ]
+  },
+  {
+    id: 'expense-tracker',
+    title: 'Expense Tracker',
+    icon: ReceiptText,
+    description: 'Track clinic expenses and review expense reports',
+    videoUrl: '/videos/expense-tracker.mp4',
+    isNew: true,
+    features: [
+      'Add and manage clinic expenses from the web app and Android app',
+      'Categorize daily costs such as rent, supplies, utilities and staff expenses',
+      'Review expense reports to understand clinic spending patterns',
+      'Keep income, billing and expense visibility together for better clinic decisions',
+    ]
+  },
+  {
+    id: 'security-pin-lock',
+    title: 'PIN Lock Security',
+    icon: LockKeyhole,
+    description: 'Extra protection for sensitive clinic information',
+    videoUrl: '/videos/security-pin-lock.mp4',
+    isNew: true,
+    features: [
+      'Lock selected sections with a PIN for extra security',
+      'Protect sensitive patient, clinic and financial information',
+      'Reduce accidental access on shared clinic devices',
+      'Add a simple privacy layer for doctors and clinic administrators',
     ]
   },
   {
@@ -94,7 +188,7 @@ const features = [
     videoUrl: '/videos/e-prescription.mp4',
     features: [
       'Custom prescription templates for faster consultations',
-      'Print prescriptions on your own clinic letterhead',
+      'Upload a digital copy of your letterhead and generate prescriptions on it',
       'Comprehensive drug database with dosage recommendations',
       'Electronic signature integration for legal compliance',
       'Prescription history tracking for each patient',
@@ -129,15 +223,29 @@ const features = [
     ]
   },
   {
+    id: 'aggregator-portal',
+    title: 'Aggregator Portal',
+    icon: Building2,
+    description: 'A portal for insurance companies and owners of multiple clinics',
+    isNew: true,
+    features: [
+      'Included from the Pro Plan and available in the Max Plan',
+      'Useful for insurance companies',
+      'Useful for owners of multiple clinics',
+    ]
+  },
+  {
     id: 'web-portal',
-    title: 'Custom Web Portal',
+    title: 'Custom Booking Portal',
     icon: Globe,
-    description: 'Patient portal and online presence',
+    description: 'Online booking with configurable services, pricing and doctor-specific time slots',
     videoUrl: '/videos/web-portal.mp4',
     features: [
       'Branded patient portal with your clinic information',
       'Online appointment booking with real-time availability',
       'Custom appointment booking web portal for each clinic',
+      'Configure offered services, pricing and time slots in the Clinic Web App',
+      'Assign services and time slots to specific doctors',
       'Appointment history and upcoming appointment reminders',
     ]
   },
@@ -169,7 +277,7 @@ export function FeaturesSection() {
           Complete clinic management suite
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Everything you need to run a modern healthcare practice in one integrated platform: Clinic Web App, Android app, iPhone-installable web app, Patient App and custom booking portal
+          Everything you need to run a modern healthcare practice in one integrated platform: Clinic Web App, Android Clinic App, Android Patient App, iOS installable Web App, multi-clinic support, multi-role staff access, custom booking portal, clinic letters, prescriptions, invoices and reminders in 20 languages, expense tracking, expense reports and PIN-protected sensitive sections
         </p>
       </motion.div>
 

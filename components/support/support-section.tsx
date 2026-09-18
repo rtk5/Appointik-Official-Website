@@ -384,21 +384,21 @@ ${formData.comments}`
                 <span>Download Appointik App</span>
               </a>
               <a 
-                href="/features"
+                href="/features/"
                 className="flex items-center space-x-3 text-gray-600 hover:text-royal-600 transition-colors"
               >
                 <CheckCircle className="w-5 h-5" />
                 <span>View All Features</span>
               </a>
               <a 
-                href="/pricing"
+                href="/pricing/"
                 className="flex items-center space-x-3 text-gray-600 hover:text-royal-600 transition-colors"
               >
                 <CheckCircle className="w-5 h-5" />
                 <span>See Pricing Plans</span>
               </a>
               <a 
-                href="/success-stories"
+                href="/success-stories/"
                 className="flex items-center space-x-3 text-gray-600 hover:text-royal-600 transition-colors"
               >
                 <CheckCircle className="w-5 h-5" />

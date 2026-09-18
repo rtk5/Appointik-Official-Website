@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -85,10 +87,12 @@ export function CaseStudiesGrid() {
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Image */}
                 <div className="relative h-64 lg:h-auto">
-                  <img
+                  <Image
                     src={study.image}
                     alt={study.clinic}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <Badge className="absolute top-4 left-4 bg-white text-gray-900">
@@ -131,7 +135,7 @@ export function CaseStudiesGrid() {
                     </div>
 
                     <blockquote className="border-l-4 border-royal-100 pl-4 italic text-gray-700">
-                      "{study.testimonial}"
+                      &ldquo;{study.testimonial}&rdquo;
                       <footer className="text-sm text-gray-600 mt-2">
                         — {study.doctor}
                       </footer>
@@ -163,7 +167,7 @@ export function CaseStudiesGrid() {
             asChild
             className="bg-royal-500 hover:bg-royal-600 text-white rounded-2xl px-8 py-3 font-semibold"
           >
-            <a href="/pricing" className="flex items-center space-x-2">
+            <a href="/pricing/" className="flex items-center space-x-2">
               <span>Start Your Free Trial</span>
               <ArrowRight className="w-4 h-4" />
             </a>
