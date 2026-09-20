@@ -74,14 +74,14 @@ const walkthrough = [
     id: 'letters',
     icon: FilePlus2,
     title: 'Letters & Documents',
-    description: 'Create clinic letters, certificates, consent forms and lab requests',
-    features: ['Referral letters', 'Medical certificates', 'Custom letters'],
+    description: 'Create clinical summaries, letters and other clinic documents',
+    features: ['Clinical visit summaries', 'Patient case summaries', 'Letters & certificates'],
     mockData: {
       title: 'Letters',
       documents: [
+        { name: 'Clinical Visit Summary', detail: 'A summary of a patient visit' },
+        { name: 'Patient Case Summary', detail: 'A summary of a patient case' },
         { name: 'Referral Letter', detail: 'Specialist referral with patient summary' },
-        { name: 'Lab Request', detail: 'Diagnostic test request with notes' },
-        { name: 'Medical Certificate', detail: 'Clinic-branded certificate for patients' },
       ]
     }
   },
@@ -374,7 +374,7 @@ function LettersInterface({ data }: { data: any }) {
       <div className="border-b pb-4">
         <h3 className="text-xl font-semibold text-gray-900">{data.title}</h3>
         <p className="mt-2 text-sm text-gray-600">
-          Generate referral letters, lab requests, medical certificates, fitness clearance notes, consent forms and custom letters.
+          Generate clinical visit summaries, patient case summaries, referral letters, medical certificates and other clinic documents using reusable templates.
         </p>
       </div>
       <div className="space-y-3">

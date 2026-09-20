@@ -25,8 +25,8 @@ const benefits = [
   },
   {
     icon: FileText,
-    title: 'Clinic letters and certificates',
-    description: 'Generate referral letters, lab requests, medical certificates, fitness clearance notes, consent forms and custom clinic letters.',
+    title: 'Letters & Documents',
+    description: 'Generate clinical visit summaries, patient case summaries, referral letters, medical certificates and other clinic documents using reusable templates.',
     color: 'bg-purple-50 text-purple-600',
   },
   {

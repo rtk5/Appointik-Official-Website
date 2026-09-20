@@ -21,7 +21,7 @@ export const pricingFaqs = [
   },
   {
     question: 'Can Appointik generate clinic letters and documents?',
-    answer: 'Yes. Appointik includes a Letters section for referral letters, lab requests, medical certificates, fitness clearance notes, consent forms and custom clinic letters.'
+    answer: 'Yes. Use reusable templates to generate clinical visit summaries, patient case summaries, referral letters, medical certificates and other clinic documents.'
   },
   {
     question: 'Can sensitive clinic sections be PIN protected?',

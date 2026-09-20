@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/card';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
   Building2,
@@ -28,7 +29,6 @@ const features = [
     title: 'Patient Management',
     icon: Users,
     description: 'Complete patient profiles with medical history',
-    videoUrl: '/videos/patient-management.mp4',
     features: [
       'Comprehensive patient profiles with photos and contact details',
       'Complete medical history tracking with chronological records',
@@ -40,7 +40,6 @@ const features = [
     title: 'Appointment Scheduling',
     icon: Calendar,
     description: 'Smart scheduling with automated reminders',
-    videoUrl: '/videos/appointment-scheduling.mp4',
     features: [
       'Schedule multiple appointments at a time',
       'Auto increment next available appointment time',
@@ -54,14 +53,11 @@ const features = [
     id: 'letters-documents',
     title: 'Letters & Documents',
     icon: FilePlus2,
-    description: 'Generate clinic letters, certificates and forms',
-    videoUrl: '/videos/letters-documents.mp4',
+    description: 'Generate clinical summaries, letters and other clinic documents',
     isNew: true,
     features: [
-      'Generate referral letters for specialist and hospital referrals',
-      'Create lab request letters with patient and clinical details',
-      'Issue medical certificates and fitness clearance letters',
-      'Prepare consent forms and custom clinic letters',
+      'Create clinical visit summaries and patient case summaries',
+      'Generate referral letters, medical certificates and other clinic documents',
       'Keep clinic documents consistent with reusable templates',
     ]
   },
@@ -70,7 +66,6 @@ const features = [
     title: '20-Language Support',
     icon: Languages,
     description: 'Android app interfaces, prescriptions, invoices and reminders in 20 languages',
-    videoUrl: '/videos/multilingual-notifications.mp4',
     isNew: true,
     features: [
       'View the Android Clinic App interface in any of 20 languages',
@@ -86,7 +81,6 @@ const features = [
     title: 'Doctors & Consultants',
     icon: UserCheck,
     description: 'Multi-doctor practice management',
-    videoUrl: '/videos/doctors-management.mp4',
     features: [
       'Secure multi-device access for doctors and clinic staff',
       'Multiple doctor profiles with individual schedules',
@@ -98,7 +92,6 @@ const features = [
     title: 'Multi-Clinic Support',
     icon: Building2,
     description: 'Manage multiple clinic branches from one account',
-    videoUrl: '/videos/multi-clinic-support.mp4',
     isNew: true,
     features: [
       'Run a primary clinic and add extra branches as your practice grows',
@@ -112,7 +105,6 @@ const features = [
     title: 'Multi-Role Staff Access',
     icon: ShieldCheck,
     description: 'Unlimited staff member accounts with role-based access, included in Max',
-    videoUrl: '/videos/multi-role-staff-access.mp4',
     isNew: true,
     features: [
       'Give role-based access to receptionists, doctors, pharmacists and lab staff',
@@ -144,7 +136,6 @@ const features = [
     title: 'Billing',
     icon: CreditCard,
     description: 'Integrated billing and payment tracking',
-    videoUrl: '/videos/billing-system.mp4',
     features: [
       'Dispensary billing with medicine inventory integration',
       'Clinic billing for consultations and procedures',
@@ -157,7 +148,6 @@ const features = [
     title: 'Expense Tracker',
     icon: ReceiptText,
     description: 'Track clinic expenses and review expense reports',
-    videoUrl: '/videos/expense-tracker.mp4',
     isNew: true,
     features: [
       'Add and manage clinic expenses from the web app and Android app',
@@ -171,7 +161,6 @@ const features = [
     title: 'PIN Lock Security',
     icon: LockKeyhole,
     description: 'Extra protection for sensitive clinic information',
-    videoUrl: '/videos/security-pin-lock.mp4',
     isNew: true,
     features: [
       'Lock selected sections with a PIN for extra security',
@@ -185,7 +174,6 @@ const features = [
     title: 'E-Prescription',
     icon: Pill,
     description: 'Digital prescription with drug database',
-    videoUrl: '/videos/e-prescription.mp4',
     features: [
       'Custom prescription templates for faster consultations',
       'Upload a digital copy of your letterhead and generate prescriptions on it',
@@ -216,7 +204,6 @@ const features = [
     title: 'Inventory Management',
     icon: Package,
     description: 'Medicine and supplies tracking',
-    videoUrl: '/videos/inventory.mp4',
     isNew: true,
     features: [
       'Integration with prescription module for automatic stock deduction'
@@ -239,7 +226,6 @@ const features = [
     title: 'Custom Booking Portal',
     icon: Globe,
     description: 'Online booking with configurable services, pricing and doctor-specific time slots',
-    videoUrl: '/videos/web-portal.mp4',
     features: [
       'Branded patient portal with your clinic information',
       'Online appointment booking with real-time availability',
@@ -254,16 +240,21 @@ const features = [
     title: 'Surveys and feedback',
     icon: BarChart3,
     description: 'Patient feedback and survey management',
-    videoUrl: '/videos/reports.mp4',
     features: [
       'Comprehensive Patient feedback and survey management',
     ]
   }
 ];
 
+const planFeatures = new Set([
+  'web-portal',
+  'aggregator-portal',
+  'multi-clinic-support',
+  'multi-role-staff-access',
+]);
+
 export function FeaturesSection() {
   const [activeTab, setActiveTab] = useState(features[0].id);
-  const activeFeature = features.find(feature => feature.id === activeTab) || features[0];
 
   return (
     <section className="section-container bg-white">
@@ -271,122 +262,113 @@ export function FeaturesSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="text-center mb-10"
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Complete clinic management suite
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Everything you need to run a modern healthcare practice in one integrated platform: Clinic Web App, Android Clinic App, Android Patient App, iOS installable Web App, multi-clinic support, multi-role staff access, custom booking portal, clinic letters, prescriptions, invoices and reminders in 20 languages, expense tracking, expense reports and PIN-protected sensitive sections
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          Manage appointments, patient records, prescriptions and billing in one
+          place. Explore tools for your clinic, your team and your patients.
         </p>
       </motion.div>
 
-      {/* Tab Navigation - Always Visible */}
-      <div className="mb-12 overflow-x-auto">
-        <div className="flex space-x-2 p-1 bg-gray-100 rounded-2xl min-w-max mx-auto w-fit">
+      <div className="lg:hidden mb-6">
+        <label htmlFor="feature-selection" className="block text-sm font-semibold text-gray-900 mb-2">
+          Explore a feature
+        </label>
+        <select
+          id="feature-selection"
+          value={activeTab}
+          onChange={(event) => setActiveTab(event.target.value)}
+          aria-controls="feature-details"
+          className="w-full rounded-xl border border-gray-300 bg-white text-gray-900 p-3 focus-outline"
+        >
+          {features.map((feature) => (
+            <option key={feature.id} value={feature.id}>{feature.title}</option>
+          ))}
+        </select>
+      </div>
+
+      <div className="grid lg:grid-cols-[260px_minmax(0,1fr)] gap-8 lg:gap-10 items-start">
+        <nav aria-label="Explore features" className="hidden lg:block rounded-2xl bg-gray-50 p-2">
           {features.map((feature) => {
             const Icon = feature.icon;
             const isActive = activeTab === feature.id;
             return (
               <button
                 key={feature.id}
+                type="button"
                 onClick={() => setActiveTab(feature.id)}
-                className={`flex flex-col items-center p-4 space-y-2 rounded-xl transition-all min-w-[120px] ${
+                aria-pressed={isActive}
+                aria-controls="feature-details"
+                className={`flex items-center gap-3 w-full p-3 rounded-xl text-left text-sm font-medium transition-colors focus-outline ${
                   isActive
-                    ? 'bg-white shadow-sm text-royal-600'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    ? 'bg-white shadow-sm text-royal-700'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-white'
                 }`}
               >
-                <Icon className="w-6 h-6" />
-                <span className="text-xs font-medium text-center leading-tight">
-                  {feature.title}
-                </span>
-                {feature.isNew && (
-                  <Badge variant="secondary" className="bg-teal-100 text-teal-700 text-xs px-2 py-0">
-                    NEW
-                  </Badge>
-                )}
+                <Icon className="w-5 h-5 shrink-0" aria-hidden="true" />
+                <span>{feature.title}</span>
               </button>
             );
           })}
-        </div>
-      </div>
+        </nav>
 
-      {/* Tab Content */}
-      <div className="relative">
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="grid lg:grid-cols-2 gap-12 items-start"
-        >
-          {/* Feature Details */}
-          <div className="space-y-8">
-            <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 bg-royal-100 rounded-2xl flex items-center justify-center">
-                <activeFeature.icon className="w-8 h-8 text-royal-600" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
-                  {activeFeature.title}
-                  {activeFeature.isNew && (
-                    <Badge className="bg-teal-500 hover:bg-teal-600 text-white">
-                      NEW
-                    </Badge>
-                  )}
-                </h2>
-                <p className="text-xl text-gray-600 mt-2">{activeFeature.description}</p>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900">Key Features:</h3>
-              <div className="grid gap-3">
-                {activeFeature.features.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    className="flex items-start space-x-3"
-                  >
-                    <CheckCircle className="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Feature Demo/Video */}
-          <div className="relative">
-            <Card className="p-8 bg-gradient-to-br from-gray-50 to-white shadow-2xl rounded-3xl border-0">
-              <div className="aspect-video bg-gradient-to-br from-royal-100 to-teal-100 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
-                    <activeFeature.icon className="w-10 h-10 text-royal-600" />
+        <div id="feature-details" className="min-w-0 lg:sticky lg:top-24">
+          {features.map((feature) => {
+            const Icon = feature.icon;
+            return (
+              <article
+                key={feature.id}
+                hidden={activeTab !== feature.id}
+                aria-labelledby={`feature-heading-${feature.id.replaceAll(' ', '-')}`}
+              >
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 bg-royal-50 rounded-xl flex items-center justify-center shrink-0">
+                    <Icon className="w-6 h-6 text-royal-600" aria-hidden="true" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {activeFeature.title} 
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                  </p>
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-3">
+                      <h2 id={`feature-heading-${feature.id.replaceAll(' ', '-')}`} className="text-2xl md:text-3xl font-bold text-gray-900">
+                        {feature.title}
+                      </h2>
+                      {feature.isNew && (
+                        <Badge className="bg-teal-100 hover:bg-teal-100 text-teal-700">NEW</Badge>
+                      )}
+                    </div>
+                    <p className="text-lg text-gray-600 mt-2">{feature.description}</p>
+                  </div>
                 </div>
-              </div>
-            </Card>
-            
-            {/* Floating Feature Badge */}
-            {/*<div className="absolute -top-4 -right-4 bg-white rounded-2xl p-4 shadow-lg border">
-               <div className="text-sm text-gray-600 mb-1">Feature Status</div> 
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm font-medium text-green-700">Active</span> 
-              </div>
-            </div>
-            */}
-          </div>
-        </motion.div>
+
+                <h3 className="text-base font-semibold text-gray-900 mb-4">What you can do</h3>
+                <ul className={`grid gap-4 ${feature.features.length > 3 ? 'md:grid-cols-2' : ''}`}>
+                  {feature.features.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-teal-600 mt-1 shrink-0" aria-hidden="true" />
+                      <span className="text-gray-700 leading-7">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {planFeatures.has(feature.id) && (
+                  <div className="flex flex-wrap gap-3 mt-8 pt-6 border-t border-gray-200">
+                    {feature.id === 'web-portal' && (
+                      <Button asChild className="bg-royal-600 hover:bg-royal-700 text-white rounded-xl">
+                        <a href="https://book.appointik.in/c/appointik-team-clinic" target="_blank" rel="noopener noreferrer">
+                          Try Booking Portal<span className="sr-only"> (opens in a new tab)</span>
+                        </a>
+                      </Button>
+                    )}
+                    <Button asChild variant="outline" className="rounded-xl bg-white">
+                      <Link href="/pricing/">View Plans</Link>
+                    </Button>
+                  </div>
+                )}
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
